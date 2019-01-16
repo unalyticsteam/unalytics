@@ -340,6 +340,9 @@ header .intro-text {
 	background: #444 url(../img/gallery-bg.jpg) center center no-repeat fixed;
 	background-size: cover;
 	margin-bottom: 50px;
+	height: 100px;
+	padding-top: 30px;
+	border-radius: 10px;
 }
 #portfolio .section-title h2 {
 	color: #fff;
