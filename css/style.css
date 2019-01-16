@@ -183,8 +183,8 @@ a:focus {
 	
 }
 .btn-custom:hover, .btn-custom:focus, .btn-custom.focus, .btn-custom:active, .btn-custom.active {
-	color: #fff;
-	background-color:#025AC7;
+color: #fff;
+background-color:#025AC7;
 -webkit-box-shadow: 10px 10px 90px -9px rgba(0,0,0,0.81);
 -moz-box-shadow: 10px 10px 90px -9px rgba(0,0,0,0.81);
 box-shadow: 10px 10px 90px -9px rgba(0,0,0,0.81);
