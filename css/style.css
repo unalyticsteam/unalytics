@@ -467,9 +467,13 @@ ol.type li a:hover {
 	background-size: cover;
 }
 #team .overlay {
-	padding: 120px 0 80px 0;
-	background: rgba(0, 0, 0, 0.6);
+	padding: 30px 0 1px 0;
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 30px;
 }
+
+
+
 #team h2, #team p {
 	color: #fff;
 }
@@ -483,11 +487,14 @@ ol.type li a:hover {
 	margin: 5px 0;
 }
 #team img {
-	width: 280px;
+	width: 200px;
+	border-radius: 10px;
+
 }
 #team .thumbnail {
 	background: transparent;
 	border: 0;
+	margin: auto;
 }
 #team .thumbnail .team-img {
 	display: inline-block;
@@ -511,6 +518,12 @@ ol.type li a:hover {
 	padding: 0 10px;
 	font-size: 15px;
 }
+
+#team .container{
+	margin: auto;
+}
+
+
 /* Call Reservation Section */
 #call-reservation {
 	padding: 90px 0;
