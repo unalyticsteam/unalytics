@@ -753,3 +753,73 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#779936', end
 	font-weight: 700;
 	
 }
+
+
+.social-bar{
+
+	position: fixed;
+	right: 0;
+	top: 35%;
+	font-size: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	z-index: 100;
+}
+
+.icon{
+
+	color: white;
+	text-decoration: none;
+	padding: 1.2rem;
+	display: flex;
+	transition: all .5s;
+
+}
+
+
+
+.icon-twitter{
+
+	background: #339DC5;
+
+}
+
+.icon-linkedin{
+
+	background: rgb(0,119,181);
+
+}
+
+
+.icon-github{
+
+	background: black;
+
+}
+
+.icon-mail{
+
+	background: green;
+
+}
+
+.icon:first-child{
+
+	border-radius: 1rem 0 0 0;
+}
+
+
+.icon:last-child{
+
+	border-radius: 0 0 0 1rem;
+}
+
+.icon:hover{
+	
+	padding-right: 3rem;
+	border-radius: 1rem 0 0 1rem;
+	box-shadow: 0 0 .5rem rgba(0,0,0,0.42)
+
+
+}
