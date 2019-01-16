@@ -306,9 +306,30 @@ header .intro-text {
 	
 }
 
+#restaurant-menu .col-xs-10{
+	font-size: 18px;
+	font-weight: 500;
+	
+}
+
+#restaurant-menu .col-xs-5{
+	font-size: 15px;
+	font-weight: 500;
+}
+
+
+#restaurant-menu .col-xs-1{
+	font-size: 15px;
+	font-weight: 700;
+	color: #4D4D4D;
+}
+
+
+
 #restaurant-menu h3 {
 	color: #3A3A3A;
 	font-size: 15px;
+	font-weight: 500;
 	
 }
 
@@ -505,11 +526,15 @@ ol.type li a:hover {
 }
 #team .overlay {
 	padding: 30px 0 1px 0;
+	padding-bottom:0px;
 	background: rgba(0, 0, 0, 0.3);
 	border-radius: 30px;
+	height: 480px;
 }
 
-
+#team .section-title{
+	height:15px;
+}
 
 #team h2, #team p {
 	color: #fff;
@@ -686,10 +711,10 @@ color: #777;
 	
 	/* Linear gradiente para el pie de pagina */ 
 	
-	background: rgb(203,25,25); /* Old browsers */
-	background: -webkit-linear-gradient(top, rgba(203,25,25,11) 0%, rgba(203,25,25,11) 50%); /* Chrome10-25,Safari5.1-6 */
-	background: -moz-linear-gradient(top, rgba(203,25,25,1) 0%, rgba(203,25,25,11) 50%); /* FF3.6-15 */
-	background: linear-gradient(to bottom, rgba(203,25,25,1) 0%, rgba(203,25,25,11) 50%); /* W3C, IE10+, FF16+, Chrome26+, 
+	background: rgb(36,36,36,1); /* Old browsers */
+	background: -webkit-linear-gradient(top, rgba(36,36,36,1) 0%, rgba(0,0,0,11) 50%); /* Chrome10-25,Safari5.1-6 */
+	background: -moz-linear-gradient(top, rgba(36,36,36,1) 0%, rgba(0,0,0,11) 50%); /* FF3.6-15 */
+	background: linear-gradient(to bottom, rgba(36,36,36,1) 0%, rgba(0,0,0,11) 50%); /* W3C, IE10+, FF16+, Chrome26+, 
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#779936', endColorstr='#8eb640', GradientType=0 ); /* IE6-9 */
 }
 
@@ -721,4 +746,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#779936', end
 }
 #footer a:hover {
 	color: #333;
+}
+
+#footer h3{
+	color: aliceblue;
+	font-weight: 700;
+	
 }
