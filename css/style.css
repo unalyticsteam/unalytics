@@ -92,6 +92,9 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 
 
 
+
+
+
 /* Navigation */
 
 
@@ -185,6 +188,7 @@ a:focus {
 .btn-custom:hover, .btn-custom:focus, .btn-custom.focus, .btn-custom:active, .btn-custom.active {
 color: #fff;
 background-color:#025AC7;
+	
 -webkit-box-shadow: 10px 10px 90px -9px rgba(0,0,0,0.81);
 -moz-box-shadow: 10px 10px 90px -9px rgba(0,0,0,0.81);
 box-shadow: 10px 10px 90px -9px rgba(0,0,0,0.81);
@@ -195,6 +199,7 @@ box-shadow: 10px 10px 90px -9px rgba(0,0,0,0.81);
 
 
 /* Header Section */
+
 .intro {
 	display: table;
 	width: 100%;
@@ -212,7 +217,7 @@ box-shadow: 10px 10px 90px -9px rgba(0,0,0,0.81);
 .intro h1 {
 	font-family: 'Dancing Script', cursive;
 	color: #fff;
-	font-size: 10em;
+	font-size: 8em;
 	font-weight: 700;
 	margin-top: 0;
 	margin-bottom: 10px;
@@ -238,10 +243,16 @@ header .intro-text {
 	padding: 120px 0;
 }
 #about h3 {
-	font-size: 20px;
+	font-size: 10px;
 }
-#about .about-text {
+#about .about-text h1 {
 	margin-left: 10px;
+	font-family: 'Dancing Script', cursive;
+	color: #838383;
+	font-size: 3em;
+	font-weight: 700;
+	margin-top: 0;
+	
 }
 #about .about-img {
 	display: inline-block;
@@ -263,7 +274,10 @@ header .intro-text {
 }
 
 
+
+
 /* ..................................Menu Section (temas)......................... */
+
 #restaurant-menu {
 	padding: 0 0 60px 0;
 }
@@ -278,8 +292,28 @@ header .intro-text {
 
 
 #restaurant-menu .section-title h2 {
+	
 	color: #fff;
+	
 }
+
+#restaurant-menu h1 {
+	color: #000000;
+	font-size: 1.5em;
+	font-weight: 600;
+	text-align: center;
+	
+	
+}
+
+#restaurant-menu h3 {
+	color: #3A3A3A;
+	font-size: 15px;
+	
+}
+
+
+
 #restaurant-menu img {
 	width: 300px;
 	box-shadow: 15px 0 #a7c44c;
