@@ -519,155 +519,125 @@ ol.type li a:hover {
 
 
 /* ............................................Team Section...................................... */
-#team {
-	color: #fff;
-	background: #444 url(../img/team-bg.jpg) center top no-repeat fixed;
-	background-size: cover;
-	border-radius: 20px;
-	padding-bottom: 20px;
-}
-#team .overlay {
-	padding: 30px 0 1px 0;
-	padding-bottom:10px;
-	background: rgba(0, 0, 0, 0.3);
-	border-radius: 30px;
-	height: 480px;
-}
 
-#team .section-title{
-	height:15px;
-}
 
-#team h2, #team p {
-	color: #fff;
-}
-#team hr {
-	background: #fff;
-}
-#team h3 {
-	color: #fff;
-	font-weight: 400;
-	font-size: 20px;
-	margin: 5px 0;
-}
-#team img {
-	width: 200px;
-	border-radius: 10px;
-
-}
-#team .thumbnail {
-	background: transparent;
-	border: 0;
-	margin: auto;
-}
-#team .thumbnail .team-img {
-	display: inline-block;
-	position: relative;
-}
-#team .thumbnail .team-img:before {
-	display: block;
-	content: '';
-	position: absolute;
-	top: 8px;
-	right: 8px;
-	bottom: 8px;
-	left: 8px;
-	border: 1px solid rgba(255, 255, 255, 0.2);
-}
-#team .thumbnail .caption {
-	padding-top: 10px;
-}
-#team .thumbnail .caption p {
-	color: rgba(255,255,255,0.7);
-	padding: 0 10px;
-	font-size: 15px;
-}
-
-#team .container{
-	margin: auto;
+.team-section{
+	padding:100px 0;
 }
 
 
-/* Call Reservation Section */
-#call-reservation {
-	padding: 90px 0;
-	color: #fff;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8eb640+50,779936+100 */
-	background: rgb(142,182,64); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(142,182,64,1) 50%, rgba(119,153,54,1) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, rgba(142,182,64,1) 50%, rgba(119,153,54,1) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, rgba(142,182,64,1) 50%, rgba(119,153,54,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8eb640', endColorstr='#779936', GradientType=0 ); /* IE6-9 */
+.team-section .col-section-header{
+	padding-top:50px;
 }
-#call-reservation .overlay {
-	padding: 80px 0;
-	background: #8eb640;
+.team-section .col-section-header > p{
+	margin-bottom:35px;
 }
-#call-reservation h2 {
-	font-family: 'Open Sans', sans-serif;
-	color: #fff;
-	font-weight: 400;
-	margin: 0;
+.team-persons{
+	padding-left: 280px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin:0px;
 }
-#call-reservation hr {
-	background: #fff;
+
+
+.team-section .row {
+	height: 00px;
+	
 }
-#call-reservation h3 {
-	color: #fff;
-	font-weight: 500;
-	font-size: 20px;
-	margin: 5px 0;
+
+.team-member{
+	align-content: center;
 }
-/* Contact Section */
-#contact {
-	padding: 100px 0 60px 0;
-	background: #F6F6F6;
+.team-member > img{
+	width:100%;
+	border-radius: 8px;
 }
-#contact .section-title p {
-	color: #777;
+.team-member:before{
+	content: ' ';
+	position:absolute;
+	top:0;
+	left:0px;
+	right:0;
+	bottom:0;
+	background:rgba(40,40,40,.95);
+	z-index:11;
+	-webkit-transition:all .3s ease;
+	-moz-transition:all .3s ease;
+	transition:all .3s ease;
+	-webkit-transform:scale(.2);
+	-moz-transform:scale(.2);
+	-ms-transform:scale(.2);
+	-o-transform:scale(.2);
+	transform:scale(.2);
+	opacity:0;
+	visibility:hidden;
+	border-radius: 8px;
 }
-#contact form {
-	padding: 0;
+.team-member:hover:before{
+	opacity:1;
+	visibility:visible;
+	-webkit-transform:scale(1);
+	-moz-transform:scale(1);
+	-ms-transform:scale(1);
+	-o-transform:scale(1);
+	transform:scale(1);
 }
-#contact h3 {
-	text-transform: uppercase;
-	font-size: 20px;
-	font-weight: 400;
-	color: #555;
+.team-member > .overlay{
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	opacity:0;
+	-webkit-transition:all .3s ease;
+	-moz-transition:all .3s ease;
+	transition:all .3s ease;
+	z-index:18;
+	text-align:center;
+	color:#FFF;
 }
-#contact .text-danger {
-	color: #cc0033;
-	text-align: left;
+.team-member:hover > .overlay{
+	opacity:1;
 }
-label {
-	font-size: 12px;
-	font-weight: 400;
-	font-family: 'Open Sans', sans-serif;
-	float: left;
+.team-member > .overlay .team-social{
+	list-style:none;
+	padding:0;
+	margin:0;
+	font-size:0;
 }
-#contact .form-control {
-	display: block;
-	width: 100%;
-	padding: 6px 12px;
-	font-size: 16px;
-	line-height: 1.42857143;
-	color: #444;
-	background-color: #fff;
-	background-image: none;
-	border: 1px solid #ddd;
-	border-radius: 0;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-	-webkit-transition: none;
-	-o-transition: none;
-	transition: none;
+.team-member > .overlay .team-social > li{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
 }
-#contact .form-control:focus {
-	border-color: #999;
-	outline: 0;
-	-webkit-box-shadow: transparent;
-	box-shadow: transparent;
+.team-member > .overlay .team-social > li > a{
+	display:block;
+	color:rgba(255,255,255,.8);
+	padding:5px 10px;
+	font-size:18px;
 }
+.team-member > .overlay .team-social > li > a:hover{
+	color:#FFF;
+}
+.team-member > .overlay .inner > h4{
+	text-transform:uppercase;
+	letter-spacing:2px;
+	margin:0;
+	color:#CCCCCC;
+}
+.team-member > .overlay .inner > p{
+	margin-top:2px;
+	margin-bottom:15px;
+	color:rgba(255,255,255,.6);
+}
+
+
+
+
+
+
+
+
 .form-control::-webkit-input-placeholder {
 color: #777;
 }
@@ -755,6 +725,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#779936', end
 	font-weight: 700;
 	
 }
+
+
+
+
+
+
 
 
 .social-bar{
