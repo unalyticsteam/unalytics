@@ -94,47 +94,6 @@ $(document).ready(function() {
 	
 	
 	
-	/*=========================================================================
-		Screenshots popup box
-	=========================================================================*/
-	$('.screenshots-slider li > .inner > .overlay > a').magnificPopup({
-		type: 'image',
-		gallery:{
-			enabled:true
-		}
-	});
-	
-	/*=========================================================================
-		Testimonials Slider
-	=========================================================================*/
-	$('.testimonials-slider').owlCarousel({
-		items: 1,
-		autoplay: true,
-		autoplaySpeed: 1000
-	});
-	
-	/*=========================================================================
-		Screenshots Slider
-	=========================================================================*/
-	$('.screenshots-slider').owlCarousel({
-		items: 4,
-		autoplay: true,
-		autoplaySpeed: 1500,
-		responsive: {
-			1024: {
-				items: 4
-			},
-			992: {
-				items: 3 
-			},
-			768: {
-				items: 2
-			},
-			0: {
-				items: 1
-			}
-		}
-	});
 	
 	
 	
