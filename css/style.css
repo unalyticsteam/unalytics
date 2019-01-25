@@ -93,8 +93,6 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 
 
 
-
-
 /* Navigation */
 
 
@@ -520,7 +518,6 @@ ol.type li a:hover {
 
 /* ............................................Team Section...................................... */
 
-
 #team .section-title {
 	background: #444 url(../img/menu-bg.jpg) center center no-repeat fixed;
 	background-size:cover;
@@ -529,9 +526,9 @@ ol.type li a:hover {
 	border-radius: 10px;
 }
 
-
 .team-section{
 	padding:100px 0;
+	
 }
 
 
@@ -542,26 +539,21 @@ ol.type li a:hover {
 	margin-bottom:35px;
 }
 .team-persons{
-	padding-left: 280px;
-	padding-top: 0px;
-	padding-bottom: 0px;
+	padding:0 15px;
 	margin:0px;
 }
 
 
-.team-section .row {
-	height: 00px;
-	
-}
 
 .team-member{
 	align-content: center;
 }
 .team-member > img{
-	width:100%;
+	width:80%;
 	border-radius: 8px;
 }
 .team-member:before{
+	width:79%;
 	content: ' ';
 	position:absolute;
 	top:0;
@@ -592,11 +584,12 @@ ol.type li a:hover {
 	transform:scale(1);
 }
 .team-member > .overlay{
+	width:80%;
 	position:absolute;
 	top:0;
 	left:0;
 	height:100%;
-	width:100%;
+	
 	opacity:0;
 	-webkit-transition:all .3s ease;
 	-moz-transition:all .3s ease;
@@ -640,8 +633,6 @@ ol.type li a:hover {
 	margin-bottom:15px;
 	color:rgba(255,255,255,.6);
 }
-
-
 
 
 .team-section h2{
