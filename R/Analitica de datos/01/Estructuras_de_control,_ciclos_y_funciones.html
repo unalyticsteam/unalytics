@@ -475,6 +475,21 @@ x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</spa
 ## [46] &quot;46&quot;        &quot;47&quot;        &quot;48&quot;        &quot;buzz&quot;      &quot;fizz&quot;</code></pre>
 </div>
 </div>
+<div id="ingresar-y-mostrar-por-consola" class="section level1">
+<h1>Ingresar y mostrar por consola</h1>
+<p>Se usa la función <code>readline()</code> para ingresar valores por consola.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">readline</span>(<span class="st">&quot;nombre?&quot;</span>)</code></pre></div>
+<pre><code>## nombre?</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x</code></pre></div>
+<pre><code>## [1] &quot;&quot;</code></pre>
+<p>Se usan las funciones <code>cat()</code> y <code>print()</code> para imprimir valores por consola. La diferencia entres estas dos funciones es el tipo de objeto de devuelven.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(<span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;edad:&quot;</span>,<span class="dv">20</span>)))</code></pre></div>
+<pre><code>## [1] &quot;edad: 20&quot;</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(<span class="kw">cat</span>(<span class="kw">paste</span>(<span class="st">&quot;edad: &quot;</span>,<span class="dv">20</span>)))</code></pre></div>
+<pre><code>## edad:  20</code></pre>
+<pre><code>## [1] &quot;NULL&quot;</code></pre>
+</div>
 <div id="referencias" class="section level1">
 <h1>Referencias</h1>
 <ul>
