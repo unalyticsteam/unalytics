@@ -8,9 +8,12 @@ Un paquete es simplemente una colección de funciones, datos y código R.
 
 ### Instalar la librería.
 Para instalar una librería podemos hacerlo directamente desde la consola escribiendo:
+
 ```{r}
 install.packages("dplyr")
 ```
+Donde dplyr es el nombre de la libreria. 
+
 ![](Capture1.PNG) 
 
 
