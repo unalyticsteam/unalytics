@@ -576,6 +576,26 @@ header .intro-text {
 
 
 
+/* ++++++++++++++++++++++++++++++++++ Noticia ++++++++++++++++++++++++++++++++++  */
+
+#noticias .section-title {
+	background: #444 url(../img/menu-bg.jpg) center center no-repeat fixed;
+	background-size:cover;
+	height: 100px;
+	padding-top: 30px;
+	border-radius: 10px;
+	
+}
+
+#noticias .section-title h2 {
+	
+	color: #fff;
+	
+}
+
+
+
+
 /* ..................................Menu Section (temas)......................... */
 
 #restaurant-menu {
