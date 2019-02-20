@@ -1,0 +1,667 @@
+Clase 2: Estructuras de datos, estructuras de control y funciones.
+========================================================
+<div align="center">
+<img src="LogoUnalytics.png">
+</div>
+<style>
+.small-code pre code {
+  font-size: 1em;
+}
+</style>
+
+
+Temas
+========================================================
+1. Estructuras de datos en R.
+   + vectores
+   + matrices y arreglos
+   + listas
+   + dataframe
+2. Estructuras de control.
+   + if
+   + for
+   + while
+   + repeat y break
+3. Funciones.
+
+
+<!-- ---------------------------------------------Vectores----------------------------------------------- -->
+
+Vectores
+========================================================
+class: small-code
+
+### Crear un vector
+```{r}
+vector_numeros <- c(1, 5, 84, 9, 0)   # creando vector de números
+vector_numeros
+```
+
+```{r}
+vector_caracteres <- c("a", "b", "c")  # creando vector de caracteres
+vector_caracteres
+```
+
+```{r}
+vector_booleanos <- c(TRUE, TRUE, FALSE, FALSE, TRUE, T, T, F) # creando vector de booleanos
+vector_booleanos
+```
+
+
+========================================================
+class: small-code
+
+#### Otras funciones para crear vectores.
+
+```{r}
+vector_vacio <- vector()  # creando vector vacío.
+vector_vacio 
+```
+
+```{r}
+vector_secuencia <- seq(1, 5, 0.5) # seq(inicio secuencia, fin secuencia, en saltos de)
+vector_secuencia
+```
+
+```{r}
+vector_secuencia2 <- c(1:5) # otra manera de crear secuencias
+vector_secuencia2
+```
+
+```{r}
+vector_repetir <- rep(2, 6) # rep(número, veces)
+vector_repetir
+```
+
+ 
+
+========================================================
+class: small-code
+
+```{r}
+vector_numeros
+```
+
+```{r}
+vector_caracteres
+```
+
+#### Extracciónde elementos de un vector
+
+```{r}
+vector_numeros[3]  # para extraer tercer elemento del vector_numeros
+```
+
+```{r}
+vector_caracteres[2]  # para extraer el segundo elemento del vector_caracteres
+```
+
+=======================================================
+class: small-code
+
+```{r}
+vector_numeros
+```
+
+
+#### Extraer una secuencia
+```{r}
+vector_numeros[1:3]  # para extraer los primeros 3 elementos del vector_numeros
+```
+
+#### Extraer por vector lógico
+```{r}
+vector_numeros[vector_numeros > 2]  # extraer los elementos mayores a 1 del vector_numeros
+```
+
+#### Extraer por comparación o diferencia
+
+```{r}
+vector_numeros[vector_numeros != 84]  # para extraer los elementos diferentes a 84
+```
+
+
+=======================================================
+class: small-code
+
+### Eliminar elementos de un vector
+
+```{r}
+vector_numeros
+```
+
+#### Eliminar
+```{r}
+vector_numeros[-3]  # para eliminar tercer elemento del vector_numeros
+```
+
+```{r}
+vector_numeros[-c(1:3)]  # para eliminar los primeros 3 elemetos del vector_numeros
+```
+
+
+
+
+<!-- ---------------------------------------------Matrices y arreglos----------------------------------------------- -->
+
+Matrices y arreglos.
+========================================================
+class: small-code
+
+```{r}
+# creando una matriz numérica
+matriz <- matrix(c(1, 2, 36, 9, 5, 2), ncol = 3, byrow = TRUE)
+matriz
+```
+
+#### Dimensión 
+```{r}
+dim(matriz)
+```
+
+
+#### Reasignando los valores para los elementos de una matriz 
+```{r}
+matriz[1, 3]  <- 0
+matriz
+```
+
+
+=======================================================
+class: small-code
+
+```{r}
+matriz
+```
+
+#### Extraer un elemento de una matriz 
+```{r}
+matriz[2, 1]  # matriz[fila, columna]
+```
+
+#### Extraer por columna
+```{r}
+matriz[, 1]  # matriz[fila, columna]
+
+```
+
+```{r}
+matriz[, 1, drop=FALSE]
+```
+
+
+========================================================
+class: small-code
+```{r}
+matriz
+```
+#### Extraer por fila
+```{r}
+matriz[1, ]  # matriz[fila, columna]
+
+```
+
+#### Extraer secuencias (sub matrices)
+```{r}
+matriz[1:2, 1:2]  # matriz[fila, columna]
+```
+
+
+
+
+
+========================================================
+class: small-code
+### Algunas Operaciones con matrices
+```{r}
+A <- matrix(c(1, 2, 3, 4), nrow = 2, byrow = TRUE)
+A
+```
+
+
+```{r}
+B <- matrix(c(5, 6, 7, 8), nrow = 2, byrow = TRUE)
+B
+```
+
+#### Sumar y restar
+```{r}
+A + B
+```
+
+
+========================================================
+class: small-code
+
+```{r}
+A
+```
+
+```{r}
+B
+```
+
+#### Multiplicar elemento a elemento
+```{r}
+A * B
+```
+
+
+
+
+
+========================================================
+class: small-code
+
+```{r}
+A
+```
+
+```{r}
+B
+```
+
+#### Multiplicación Matricial *
+```{r}
+A %*% B
+```
+
+
+#### Traza de una matriz
+```{r}
+sum(diag(A))
+```
+
+
+Arreglos
+========================================================
+class: small-code
+#### Un array es la generalización de una matriz de dos dimensiones al caso multidimensional.
+```{r}
+arreglo <- array(c(45, 46, 65, 55, 170, 167, 48, 49, 68, 56, 169, 165), c(2, 3, 2))
+#dim=(2, 3, 4)  --> dim =(número_filas, número_columnas, número_objetos)
+dimnames(arreglo)<-list(c("hombres","mujeres"),c("edad","peso","altura"), c("Medellín","Bogotá")) 
+arreglo
+```
+
+========================================================
+class: small-code
+#### Extraer elementos
+
+```{r}
+arreglo["hombres" , , ] # x[filas, columas, objeto]
+```
+
+
+```{r}
+arreglo[ , ,"Medellín"] # x[filas, columas, objeto]
+```
+
+
+```{r}
+arreglo["mujeres","edad","Bogotá" ] 
+```
+
+
+<!-- ---------------------------------------------Listas----------------------------------------------- -->
+
+Listas
+========================================================
+class: small-code
+
+##### Las listas pueden contener distintos tipos de datos
+
+```{r}
+lista_1 <- list(1, "a", TRUE, 2.5)
+```
+
+
+```{r}
+lista_2 <- list(c(1:5), c("a", "b", "c"), c(TRUE, TRUE), c(2.5, 3.2, 2.2))
+lista_2
+```
+
+
+
+
+=======================================================
+class: small-code
+```{r}
+lista_2
+```
+
+#### Extracción en una lista
+```{r}
+lista_2[1]  # regresa en forma de lista
+```
+
+```{r}
+lista_2[[1]]  # regresa el vector
+```
+
+```{r}
+lista_2[[4]][1]
+```
+
+
+
+
+<!-- ---------------------------------------------Dataframe--------------------------------------------- -->
+
+Dataframe*
+========================================================
+class: small-code
+```{r}
+x <- 1:4
+y <- c("a", "b", "c", "d")
+marco.datos <- data.frame(x,y)
+marco.datos
+```
+
+#### Extraer 
+```{r}
+marco.datos[,1] # Se extrae solo la columna 1
+```
+
+#### Extraer columna con $
+```{r}
+marco.datos$x
+```
+
+
+
+
+<!-- ---------------------------------------------Estructuras de control, ciclos y funciones.--------------------------------------------- -->
+
+Estructuras de control 
+========================================================
+class: small-code
+
+### Condicional if
+
+```{r eval=FALSE}
+if (condicion){
+  
+  Instruccion_1
+  Instruccion_2
+  
+}else {
+  Instruccion_1
+  Instruccion_2
+}
+```
+
+
+#### varias condiciones  
+
+```{r eval=FALSE}
+if (condicion_1){
+  Instrucción_1
+  Instrucción_2
+}else if (condición_2) {
+  Instrucción_1
+  Instrucción_2
+}else {
+  Instrucción_1
+  Instrucción_2
+}
+```
+
+
+
+
+========================================================
+class: small-code
+#### Ejemplos
+
+```{r}
+edad <- 99
+if (edad >= 80){
+  print("Usted es una persona de la tercera edad")
+} else {
+  print("Usted es una persona joven")
+}
+
+```
+
+```{r}
+edad <- 1
+if (edad >= 80){
+  print("Usted es una persona de la tercera edad")
+} else if (edad >= 12 &  edad < 80){
+  print("Usted es una persona joven")
+} else {
+  print("Usted es un niño")
+}
+
+```
+
+
+========================================================
+incremental: true
+
+#### ¿Qué imprime? 
+
+```{r}
+A <- TRUE
+if(A == T){
+    print("Sabrina")
+} else if(A == TRUE){
+    print("Andrea")
+} else {
+    print("Esteban")
+}
+
+```
+
+
+=========================================================
+incremental: true
+### Ciclo for
+
+```{r eval=FALSE}
+for (i in secuencia) {
+  operación_1
+  operación_2
+  operación_3
+}
+```
+
+#### Ejemplo
+```{r}
+vec <- vector()
+for (i in 1:4) {
+  vec[i] <- i
+}
+vec
+```
+
+=========================================================
+class: small-code
+#### For anidado
+
+#### Ejemplos
+```{r}
+x <- matrix(seq(1,18,2), byrow = TRUE, ncol = 3)
+x 
+for (i in 1:ncol(x)){
+  for (j in 1:nrow(x)){
+    
+    print(x[i,j])
+  }
+}
+```
+
+
+
+
+================================================
+incremental: true
+
+### Ciclo while
+
+```{r eval= FALSE}
+while (condición) {
+  operación_1
+  operación_2
+  operación_3
+}
+```
+
+#### ¿Qué imprime?
+```{r}
+x <- 1 
+while(x < 5){
+  print(x)
+  x <- x + 1 
+}
+
+```
+
+
+=============================================
+
+#### ¿Qué imprime?
+```{r, eval=FALSE}
+x <- 1 
+while(x < 5){
+  print(x)
+}
+
+```
+
+repeat y break
+========================================================
+
+```{r eval=FALSE}
+
+repeat {
+  #operaciones...
+  if (condición){
+    #operaciones...
+  }
+  else{
+    break()
+  }
+}
+```
+
+
+Funciones
+=========================================================
+```{r eval=FALSE}
+nombre_función <- function(parametro1, parametro2, ...){
+  procedimiento_1
+  procedimiento_2
+  procedimiento_3
+  return(resultado)
+}
+```
+
+### Ejemplos
+
+```{r}
+suma <- function(x, y){
+  x+y
+}
+# llamando la función
+suma(x=5, y=6)
+```
+
+=========================================================
+
+```{r}
+potencia <- function(x, y) {
+   result <- x^y
+   paste(x,"elevado a la potencia de", y, "es", result)
+}
+potencia(2,3)
+```
+
+
+Ingresar y mostrar por consola
+========================================================
+
+```{r}
+x <- readline("¿Cuál es su nombre?:\n")
+```
+
+```{r}
+print("hola mundo")
+```
+
+```{r}
+cat("hola mundo")
+```
+
+
+
+Preguntas y ejercicios propuestos. 
+========================================================
+incremental: true
+
+
+#### 1) Cómo se crea un vector vacio ?
+```{r}
+vector <- vector()
+```
+
+
+
+#### 2) Qué tipo de vector es y ? 
+```{r}
+y <- c(1, "1", 3) 
+class(y)
+```
+
+
+=========================================================
+incremental: true
+
+#### 3) por defecto como se rellena una matriz. 
+##### Respuesta: Por columnas de izquierda a derecha
+
+
+#### 4) Cómo prodira acceder al primer elemento del cuarto vector de la lista_2?
+
+```{r}
+lista_2 <- list(c(1:5), c("a", "b", "c"), c(TRUE, TRUE), c(2.5, 3.2, 2.2)) 
+```
+```{r}
+lista_2[[4]][1]
+```
+
+#### 5) Cree una función que sume los n primeros números naturales, el valor de n será pedido por consola e ingresado por el usuario y el resultado sera mostrado por consola con un mensaje.
+
+
+=========================================================
+##### Solución ejercicio 5
+
+```{r eval=FALSE}
+funcion <- function(){
+  n <-  readline("ingrese el valor de n: \n")
+  suma <- 0
+  for (i in 1:n){
+    suma <- suma + i
+    }
+paste("El resultado es", suma)
+
+}
+# llamado a la función
+funcion()
+```
+
+
+Más recursos. 
+=======================================================
+type: alert
+
+###  Página web de Unalytics:
+
+<https://unalyticsteam.github.io/unalytics.github.io/>
+
+
+### Facebook Unalytics.
+
+<https://www.facebook.com/Unalytics-322526711883200/?modal=admin_todo_tour>
+

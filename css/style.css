@@ -405,13 +405,19 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 #menu.navbar-default {
 	background-color: rgba(248, 248, 248, 0);
 	border-color: rgba(231, 231, 231, 0);
+	
+	
 }
+
+
+
 #menu a.navbar-brand {       
 	font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', 'serif'cursive;
 	font-size: 24px;
 	color: #FFFFFF;
 	font-weight: 700;
 	letter-spacing: 1px;
+	padding-bottom: 0px;
 }
 #menu.navbar-default .navbar-nav > li > a {
 	text-transform: uppercase;
@@ -423,6 +429,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	letter-spacing: 0.5px;
 	margin: 10px 15px 0 15px;
 }
+
 #menu.navbar-default .navbar-nav > li > a:hover {
 	color:#2F76CF;
 }
@@ -1098,6 +1105,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#779936', end
 	background: rgb(0,119,181);
 
 }
+
+
 
 
 .icon-github{

@@ -1,7 +1,10 @@
 ---
-title: "Cómo instalar librerías/paquetes en R ?"
-output: html_notebook
+title: "R Notebook"
+output:
+  html_document:
+    df_print: paged
 ---
+
 Un paquete es simplemente una colección de funciones, datos y código R. 
 
 
@@ -27,6 +30,3 @@ Para cargar el paquete podemos escribir en la consola lo siguiente:
 ```{r}
 library(dplyr)
 ```
-
- 
- 
