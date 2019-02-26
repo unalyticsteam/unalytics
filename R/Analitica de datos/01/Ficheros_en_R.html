@@ -337,10 +337,127 @@ div.tocify {
 </div>
 
 
+<div id="excel" class="section level1">
+<h1>EXCEL</h1>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">read_excel</span>(<span class="st">&quot;ruta&quot;</span>, <span class="dt">sheet =</span> <span class="dv">2</span>)</code></pre></div>
+<ul>
+<li>sheet &lt;- Nombre o Número de la hoja.</li>
+<li>n_max &lt;- Número amximo de renglones a leer.</li>
+<li>na &lt;- Formas alternativas a los NA</li>
+<li>range &lt;- Rango de deldas(“nombreHoja!B2:G14)</li>
+<li>col_names &lt;- Nombres posibles para las columnas</li>
+<li>col_types &lt;- Tipo de variables en las columnas</li>
+<li>reim_ws &lt;- Se deben recortar los espacios en blanco iniciales y finales.</li>
+<li>skip &lt;- Número mínimo de filas que se deben omitir antes de leer algo.</li>
+</ul>
+<div id="ejemplo" class="section level2">
+<h2>Ejemplo</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(readxl)
+<span class="kw">library</span>(kableExtra)
+
+dataset &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;../Bases de datos/Base salarios.xls&quot;</span>, <span class="dt">sheet =</span> <span class="dv">2</span>)
+<span class="kw">kable</span>(<span class="kw">head</span>(dataset), <span class="st">&quot;markdown&quot;</span>)</code></pre></div>
+<table>
+<colgroup>
+<col width="10%"></col>
+<col width="8%"></col>
+<col width="8%"></col>
+<col width="8%"></col>
+<col width="12%"></col>
+<col width="16%"></col>
+<col width="10%"></col>
+<col width="11%"></col>
+<col width="12%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="right">ID empleado</th>
+<th align="left">Apellido</th>
+<th align="left">Nombre</th>
+<th align="left">Seccional</th>
+<th align="left">Facultad</th>
+<th align="left">Cargo</th>
+<th align="left">Salario</th>
+<th align="left">Fch comienzo</th>
+<th align="left">Fch nacimiento</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1968</td>
+<td align="left">Burgos</td>
+<td align="left">Jeronimo</td>
+<td align="left">Palmira</td>
+<td align="left">Administración</td>
+<td align="left">Administrativo</td>
+<td align="left">10661-04-19</td>
+<td align="left">1982-04-05</td>
+<td align="left">1951-09-28</td>
+</tr>
+<tr class="even">
+<td align="right">1674</td>
+<td align="left">Villegas</td>
+<td align="left">Estefania</td>
+<td align="left">Palmira</td>
+<td align="left">Administración</td>
+<td align="left">Docente</td>
+<td align="left">10661-04-19</td>
+<td align="left">1992-03-25</td>
+<td align="left">1964-01-17</td>
+</tr>
+<tr class="odd">
+<td align="right">1516</td>
+<td align="left">Fernandez</td>
+<td align="left">Guillermo</td>
+<td align="left">Palmira</td>
+<td align="left">Administración</td>
+<td align="left">Docente</td>
+<td align="left">14220-07-30</td>
+<td align="left">1985-03-06</td>
+<td align="left">1963-06-26</td>
+</tr>
+<tr class="even">
+<td align="right">1330</td>
+<td align="left">Ramirez</td>
+<td align="left">Eliana</td>
+<td align="left">Palmira</td>
+<td align="left">Administración</td>
+<td align="left">Docente</td>
+<td align="left">10661-04-19</td>
+<td align="left">1989-02-14</td>
+<td align="left">1964-05-17</td>
+</tr>
+<tr class="odd">
+<td align="right">1657</td>
+<td align="left">Carmona</td>
+<td align="left">Jose</td>
+<td align="left">Palmira</td>
+<td align="left">Administración</td>
+<td align="left">Docente</td>
+<td align="left">10661-04-19</td>
+<td align="left">1987-12-06</td>
+<td align="left">1963-10-10</td>
+</tr>
+<tr class="even">
+<td align="right">1573</td>
+<td align="left">De santis</td>
+<td align="left">Marcela</td>
+<td align="left">Palmira</td>
+<td align="left">Administración</td>
+<td align="left">Aux. Administrativo</td>
+<td align="left">6006-11-09</td>
+<td align="left">1988-07-07</td>
+<td align="left">1960-05-31</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nota: </strong> Tambien de pueden leer los links de bases de datos que se encuenten alojadas en un dirección en la web.</p>
+</div>
+</div>
 <div id="csv" class="section level1">
 <h1>CSV</h1>
 <p>Los archivos CSV (del inglés comma-separated values) son un tipo de documento en formato abierto sencillo para representar datos en forma de tabla, en las que las columnas se separan por comas, en R utilizamos los siguientes códigos para trabajar con esta clase de fichero.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">read.csv</span>() ó<span class="kw">read.csv2</span>() si el archivo es separado con ;</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">read.csv</span>() ó <span class="kw">read.csv2</span>() si el archivo es separado con ;</code></pre></div>
 <ul>
 <li>sep=“,” &lt;- Me permite indicar la separación entre columnas (, . )</li>
 <li>dec=“,” &lt;- Me permite indicar el separador decimal</li>
@@ -349,11 +466,9 @@ div.tocify {
 <li>na.strings=“NA” &lt;- Como están denotados los NA en las base de datos</li>
 <li>stringAsFactor=F &lt;- Por defecto T me permite ordenar a R que no convierta los string en factores</li>
 </ul>
-<div id="ejemplo" class="section level2">
+<div id="ejemplo-1" class="section level2">
 <h2>Ejemplo</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(kableExtra)
-
-auto &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../Bases de datos/auto-mpg.csv&quot;</span>, 
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">auto &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;../Bases de datos/auto-mpg.csv&quot;</span>, 
                  <span class="dt">header =</span> <span class="ot">TRUE</span>, <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>,
                  <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)
 
@@ -469,11 +584,14 @@ datos &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span cla
 <li>t &lt;- Me permite transponer una matriz o un data frame</li>
 <li>row.name = NULL &lt;- Indico a R que las filas no tendrán nombres.</li>
 </ul>
-<div id="ejemplo-1" class="section level2">
+<div id="ejemplo-2" class="section level2">
 <h2>Ejemplo</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(XML)</code></pre></div>
-<pre><code>## Warning: package 'XML' was built under R version 3.5.2</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">url &lt;-<span class="st"> &quot;../Bases de datos/cd_catalog.xml&quot;</span>
+<p>Para leer bases de datos directamente de una página web se usa:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(RCurl)
+xData &lt;-<span class="st"> </span><span class="kw">getURL</span>(<span class="st">&quot;url&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(XML)
+
+url &lt;-<span class="st"> &quot;../Bases de datos/cd_catalog.xml&quot;</span>
 
 xmldoc &lt;-<span class="st"> </span><span class="kw">xmlParse</span>(url) 
 rootnode &lt;-<span class="st"> </span><span class="kw">xmlRoot</span>(xmldoc)
@@ -812,7 +930,7 @@ tabla &lt;-<span class="st"> </span><span class="kw">readHTMLTable</span>(url,<s
 <ul>
 <li>which = # &lt;- Nos permite indicar cual tabla queremos</li>
 </ul>
-<div id="ejemplo-2" class="section level2">
+<div id="ejemplo-3" class="section level2">
 <h2>Ejemplo</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">population_url &lt;-<span class="st"> &quot;../Bases de datos/WorldPopulation-wiki.htm&quot;</span>
 tables &lt;-<span class="st"> </span><span class="kw">readHTMLTable</span>(population_url)
@@ -874,15 +992,15 @@ base &lt;-<span class="st"> </span>base<span class="op">$</span>list<span class=
 
 <span class="co">#Por ultimo, si queremos convertir un data frame en un archivo json podemos hacer lo siguiente</span>
 <span class="kw">toJSON</span>(data.frame)</code></pre></div>
-<div id="ejemplo-3" class="section level2">
+<div id="ejemplo-4" class="section level2">
 <h2>Ejemplo</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(jsonlite)</code></pre></div>
-<pre><code>## Warning: package 'jsonlite' was built under R version 3.5.2</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dat.<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">fromJSON</span>(<span class="st">&quot;../Bases de datos/students.json&quot;</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(jsonlite)
 
 
-<span class="co"># Libreria para leer url y extrar las tablas</span>
-<span class="kw">library</span>(curl)
+dat.<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">fromJSON</span>(<span class="st">&quot;../Bases de datos/students.json&quot;</span>)
+
+
+
 
 url &lt;-<span class="st"> &quot;http://www.floatrates.com/daily/usd.json&quot;</span>
 currencies &lt;-<span class="st"> </span><span class="kw">fromJSON</span>(url)
@@ -900,10 +1018,111 @@ currency.data &lt;-<span class="st"> </span>currencies<span class="op">$</span>e
 ## [10] &quot;mageehump@gmail.com&quot;  &quot;kcooper@hotmail.com&quot;  &quot;croy@yahoo.com&quot;</code></pre>
 </div>
 </div>
+<div id="rdata-y-rds" class="section level1">
+<h1>Rdata y rds</h1>
+<p>Son estructuras de datos propias de R. Estos objetos tienen las ventajas que permiten guardarlos y enviarl objetos y procedimientos para que queden almacenados y puedan ser usados posteriormente.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">clientes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Juan&quot;</span>,<span class="st">&quot;Pedro&quot;</span>,<span class="st">&quot;Lucas&quot;</span>)
+fechas &lt;-<span class="st"> </span><span class="kw">as.Date</span>(<span class="kw">c</span>(<span class="st">&quot;2017-12-27&quot;</span>,<span class="st">&quot;12-11-1&quot;</span>,<span class="st">&quot;2018-1-1&quot;</span>))
+pago &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">315</span>,<span class="fl">192.55</span>,<span class="fl">40.15</span>)
+pedido &lt;-<span class="st"> </span><span class="kw">data.frame</span>(clientes,fechas,pago)
+
+<span class="co">#Aguardando data frame tipo Rdata</span>
+<span class="kw">save</span>(pedido,<span class="dt">file=</span><span class="st">&quot;../Bases de datos/Objeto1.Rdata&quot;</span>) <span class="co"># Permite guardar mas de un archivo. </span>
+
+<span class="co">#Guardando dataframe tipo rds</span>
+<span class="kw">saveRDS</span>(pedido,<span class="dt">file=</span><span class="st">&quot;../Bases de datos/Objeto2.rds&quot;</span>)
+
+<span class="co">#Cargar objeto Rdata</span>
+<span class="kw">load</span>(<span class="st">&quot;../Bases de datos/Objeto1.Rdata&quot;</span>)
+
+<span class="co">#Cargar objeto RDS</span>
+
+objeto &lt;-<span class="st"> </span><span class="kw">readRDS</span>(<span class="st">&quot;../../../Bases de datos/base2.rds&quot;</span>)</code></pre></div>
+<p><strong>Nota: </strong> remove(Objeto) Permite remover elementos cargados para eliminar desgate de memoria.</p>
+<p>Para guardar todos los objetos de una sección se usa:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">save.image</span>(<span class="dt">file =</span> <span class="st">&quot;../carpeta/fichero.Rdata&quot;</span>)</code></pre></div>
+</div>
+<div id="archivos-de-texto" class="section level1">
+<h1>Archivos de texto</h1>
+<p>Se pueden leer tipos archivos de texto como libros o otros documentos.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">archivo &lt;-<span class="st"> &quot;../Bases de datos/texto.txt&quot;</span>
+con &lt;-<span class="st"> </span><span class="kw">file</span>(archivo, <span class="dt">open=</span><span class="st">&quot;r&quot;</span>) <span class="co"># Abrimos la conexión</span>
+documento &lt;-<span class="st"> </span><span class="kw">readLines</span>(con)          <span class="co"># Leemos el contenido del archivo</span></code></pre></div>
+<pre><code>## Warning in readLines(con): incomplete final line found on '../Bases de
+## datos/texto.txt'</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">close</span>(con)                           <span class="co"># Cerramos la conexión</span>
+
+<span class="kw">str</span>(documento)</code></pre></div>
+<pre><code>##  chr [1:2] &quot;Los archivos CSV (del inglés comma-separated values) son un tipo de documento en formato abierto sencillo para &quot;| __truncated__ ...</code></pre>
+<p>Y para escribir un archivo de texto.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">texto &lt;-<span class="st"> &quot;Hola mundo&quot;</span>
+con &lt;-<span class="st"> </span><span class="kw">file</span>(<span class="st">&quot;C:/carpeta/texto_ejemplo.txt&quot;</span>, <span class="dt">open=</span><span class="st">&quot;w&quot;</span>)
+documento &lt;-<span class="st"> </span><span class="kw">writeLines</span>(<span class="dt">text =</span> texto, <span class="dt">con =</span> con)
+<span class="kw">close</span>(con)</code></pre></div>
+</div>
+<div id="bases-de-datos-grandes" class="section level1">
+<h1>Bases de datos grandes</h1>
+<p>Similar a read.tablepero más rápido y más conveniente. Todos los controles como sep, colClassesy nrowsson detectados automáticamente.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(data.table)
+
+<span class="kw">fread</span>(input, file, text, cmd, <span class="dt">sep=</span><span class="st">&quot;auto&quot;</span>, <span class="dt">sep2=</span><span class="st">&quot;auto&quot;</span>, <span class="dt">dec=</span><span class="st">&quot;.&quot;</span>, <span class="dt">quote=</span><span class="st">&quot;</span><span class="ch">\&quot;</span><span class="st">&quot;</span>,<span class="dt">nrows=</span><span class="ot">Inf</span>, <span class="dt">header=</span><span class="st">&quot;auto&quot;</span>,
+  <span class="dt">na.strings=</span><span class="kw">getOption</span>(<span class="st">&quot;datatable.na.strings&quot;</span>,<span class="st">&quot;NA&quot;</span>), 
+  <span class="dt">stringsAsFactors=</span><span class="ot">FALSE</span>, <span class="dt">verbose=</span><span class="kw">getOption</span>(<span class="st">&quot;datatable.verbose&quot;</span>, <span class="ot">FALSE</span>),
+  <span class="dt">skip=</span><span class="st">&quot;__auto__&quot;</span>, <span class="dt">select=</span><span class="ot">NULL</span>, <span class="dt">drop=</span><span class="ot">NULL</span>, <span class="dt">colClasses=</span><span class="ot">NULL</span>,
+  col.names,
+  <span class="dt">check.names=</span><span class="ot">FALSE</span>, <span class="dt">encoding=</span><span class="st">&quot;unknown&quot;</span>,
+  <span class="dt">strip.white=</span><span class="ot">TRUE</span>, <span class="dt">fill=</span><span class="ot">FALSE</span>, <span class="dt">blank.lines.skip=</span><span class="ot">FALSE</span>,
+  <span class="dt">key=</span><span class="ot">NULL</span>, <span class="dt">index=</span><span class="ot">NULL</span>)</code></pre></div>
+</div>
+<div id="otras-alternativas" class="section level1">
+<h1>Otras alternativas</h1>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># read.table</span>
+
+DF &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;base.csv&quot;</span>,<span class="dt">stringsAsFactors=</span><span class="ot">FALSE</span>)     
+
+ 
+<span class="co"># read.table optimizado</span>
+
+DF &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;base.csv&quot;</span>,<span class="dt">header=</span><span class="ot">TRUE</span>,<span class="dt">sep=</span><span class="st">&quot;,&quot;</span>,<span class="dt">quote=</span><span class="st">&quot;&quot;</span>, 
+                  <span class="dt">stringsAsFactors=</span><span class="ot">FALSE</span>,<span class="dt">comment.char=</span><span class="st">&quot;&quot;</span>,<span class="dt">nrows=</span><span class="fl">1e6</span>,                  
+                  <span class="dt">colClasses=</span><span class="kw">c</span>(<span class="st">&quot;numeric&quot;</span>,<span class="st">&quot;integer&quot;</span>,<span class="st">&quot;numeric&quot;</span>,                       
+                  <span class="st">&quot;character&quot;</span>,<span class="st">&quot;numeric&quot;</span>,<span class="st">&quot;integer&quot;</span>))</code></pre></div>
+</div>
+<div id="exportar-bases-de-datos" class="section level1">
+<h1>Exportar bases de datos</h1>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># texto. csv,..</span>
+<span class="kw">write.table</span>(x, <span class="dt">file =</span> <span class="st">&quot;&quot;</span>, <span class="dt">append =</span> <span class="ot">FALSE</span>, <span class="dt">quote =</span> <span class="ot">TRUE</span>, <span class="dt">sep =</span> <span class="st">&quot; &quot;</span>,
+            <span class="dt">eol =</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>, <span class="dt">na =</span> <span class="st">&quot;NA&quot;</span>, <span class="dt">dec =</span> <span class="st">&quot;.&quot;</span>, <span class="dt">row.names =</span> <span class="ot">TRUE</span>,
+            <span class="dt">col.names =</span> <span class="ot">TRUE</span>,
+            <span class="dt">fileEncoding =</span> <span class="st">&quot;&quot;</span>)
+
+<span class="co"># excel</span>
+
+
+<span class="kw">write.xlsx2</span>(x, file, <span class="dt">sheetName =</span> <span class="st">&quot;Sheet1&quot;</span>,
+  <span class="dt">col.names =</span> <span class="ot">TRUE</span>, <span class="dt">row.names =</span> <span class="ot">TRUE</span>, <span class="dt">append =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<ul>
+<li>x &lt;- Objeto a ser escrito.</li>
+<li>file &lt;- Es la ruta y el nombre del archivo (“../carpeta/archivo.txt”)</li>
+<li>append &lt;- lógico. Solo relevante si el archivo es una cadena de caracteres. Si es VERDADERO, la salida se añade al archivo. Si es FALSO, cualquier archivo existente del nombre se destruye.</li>
+<li>quote &lt;- un valor lógico. Si es VERDADERO, cualquier columna de carácter o factor estará rodeada por comillas dobles. Si es un vector numérico, sus elementos se toman como índices de columnas para citar.</li>
+<li>sep &lt;- Separador</li>
+<li>eol &lt;- Caracter a imprimir en el fin de cada linea.</li>
+<li>na &lt;- Como se van a codificar los NAs.</li>
+<li>row.names &lt;- Nombres de las filas.</li>
+<li>col.names &lt;- Nombres de las columnas.</li>
+<li>fileEncoding &lt;- Codificación del archivo.</li>
+</ul>
+</div>
+<div id="recursos" class="section level1">
+<h1>Recursos</h1>
+</div>
 <div id="referencias" class="section level1">
 <h1>Referencias</h1>
 <ul>
 <li><a href="https://www.udemy.com/r-data-science/learn/v4/t/lecture/8945178?start=270" class="uri">https://www.udemy.com/r-data-science/learn/v4/t/lecture/8945178?start=270</a></li>
+<li><a href="https://mauricioanderson.com/curso-r-leer-escribir/" class="uri">https://mauricioanderson.com/curso-r-leer-escribir/</a></li>
+<li><a href="http://www.webmining.cl/2014/08/como-leer-grandes-archivos-en-r/" class="uri">http://www.webmining.cl/2014/08/como-leer-grandes-archivos-en-r/</a></li>
 </ul>
 </div>
 
