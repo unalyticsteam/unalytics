@@ -740,12 +740,24 @@ header .intro-text {
 }
 
 
+#tutorials .row{
+    margin-top:40px;
+    padding: 0 10px;
+}
+
+#tutorials .clickable{
+    cursor: pointer;   
+}
+
+#tutorials .panel-heading span {
+	margin-top: -20px;
+	font-size: 15px;
+}
 
 
 
 
-
-/* Portfolio Section */
+/* ***************************** Portfolio Section*********************************/
 #portfolio {
 	padding: 0 0 120px 0;
 }
