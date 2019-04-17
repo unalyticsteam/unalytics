@@ -17,8 +17,7 @@ $(document).on('click', '.panel-heading span.clickable', function(e){
 		$this.find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
 		
 	}
-})	
-	
+})
 	
 	
 /************************** Funcion para la seccion de noticias *********************/

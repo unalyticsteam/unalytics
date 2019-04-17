@@ -511,7 +511,7 @@ box-shadow: 10px 10px 90px -9px rgba(0,0,0,0.81);
 	display: table;
 	width: 100%;
 	padding: 0;
-	background: url(../img/intro-bg.jpg) no-repeat center center;
+	background: url(../img/EscuelaEstadistica.jpg) no-repeat center center;
 	background-color: #e5e5e5;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -760,6 +760,8 @@ header .intro-text {
 }
 
 
+/* -------------- Estilo imagen de los cursos ----------------- */
+/* R */
 #tutorials .imagen-cursos-1{
 	width:120px;
     height:120px;
@@ -775,8 +777,7 @@ header .intro-text {
 }
 
 
-
-
+/* Python */
 #tutorials .imagen-cursos-2{
 	width:120px;
     height:120px;
@@ -788,7 +789,6 @@ header .intro-text {
 
 #tutorials .imagen-cursos-2:hover {
  box-shadow: 1px 1px 10px 0 rgba(0,0,0,.1);
-
 }
 
 
