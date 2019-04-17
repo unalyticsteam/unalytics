@@ -574,7 +574,10 @@ header .intro-text {
 	right: 8px;
 	bottom: 8px;
 	left: 8px;
-	border: 1px solid rgba(255, 255, 255, 0.5);
+	border: 1px solid rgba(255, 255, 255, 
+		
+		
+		0.5);
 }
 #about p {
 	line-height: 24px;
@@ -695,8 +698,10 @@ header .intro-text {
 
 #tutorials img {
 	width: 300px;
-	box-shadow: 15px 0 #a7c44c;
 }
+
+
+
 #tutorials h3 {
 	padding: 10px 0;
 	text-transform: uppercase;
@@ -755,15 +760,16 @@ header .intro-text {
 }
 
 
-#tutorials .imagen-cursos{
+#tutorials .imagen-cursos-1{
 	width:120px;
     height:120px;
 	border-radius: 1000px;
+	box-shadow: 15px 0 #0191FF;
+	
 	
 }
 
-
-#tutorials .imagen-cursos:hover {
+#tutorials .imagen-cursos-1:hover {
  box-shadow: 1px 1px 10px 0 rgba(0,0,0,.1);
 
 }
@@ -771,7 +777,19 @@ header .intro-text {
 
 
 
+#tutorials .imagen-cursos-2{
+	width:120px;
+    height:120px;
+	border-radius: 1000px;
+	box-shadow: 15px 0 #FFB706;
+	
+	
+}
 
+#tutorials .imagen-cursos-2:hover {
+ box-shadow: 1px 1px 10px 0 rgba(0,0,0,.1);
+
+}
 
 
 
