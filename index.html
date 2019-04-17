@@ -1,17 +1,18 @@
 ﻿<!DOCTYPE html>
-<html lang="es">  <!-- Con atributo lang -->
+<html lang="es"> 
 	
 <head>
 <!-- Etiquetas meta -->	
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
 <title>Unalytics</title>
 <meta name="description" content="Análisis de datos">
-<meta name="author" content="Unalytics"> <!-- Probando Conexión Git -->
-<meta name="keywords" content="R, Python, SQL, Julia, Estadística, BIG DATA, programación, machine learning,analitica medellín,analitica colombia, semillero de analítica, universidad nacional, tutorial analitica, analitica de datos, tutorial r, noticias, proyectos analitica, analitico, conceptos de estadistica, cultura estadistica, unalytics semillero analitica de datos, investigacion, unalitics">
+<meta name="author" content="Unalytics"> 
+<meta name="keywords" content="R, Python, SQL, Julia, Estadística, Big Data, Programación, Machine Learning, Analítica Medellín, analítica Colombia, semillero de analítica, universidad nacional, tutorial analitica, analitica de datos, tutorial r, noticias, proyectos analitica, analítico, conceptos de estadistica, cultura estadistica, unalytics semillero analitica de datos, investigacion, unalitics">
 	
-<!-- Favicons
-    ================================================== -->
+<!-- Favicons ================================================== -->
 <link rel="shortcut icon" href="img/LogoUnalytics.png" type="image/x-icon">
 <link rel="apple-touch-icon" href="img/LogoUnalytics.png">
 	
@@ -19,7 +20,8 @@
 <link rel="apple-touch-icon" sizes="72x72" href="img/LogoUnalytics.png">
 <link rel="apple-touch-icon" sizes="114x114" href="img/LogoUnalytics.png">
 
-<!-- .............Hoja de estilos bootstrap CSS(Pendiente de mirar estilos en foundation Esteban )........................-->
+	
+<!-- .............Hoja de estilos bootstrap -->
 <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
 
@@ -43,12 +45,24 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 	
+<!-- Para la seccion de noticias-->
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>	
+
+	
+<!-- Para la seccion de tutoriales -->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
 </head>
 
-	
-
-
-	
+		
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"> 
 	
 	
@@ -64,43 +78,37 @@
       <a class="navbar-brand page-scroll" href="#page-top"> <h5 style="color:aliceblue " >Unalytics </h5></a>
 	  
 	 </div>
-	  
-	  
-  
-	  
+	    
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#about" class="page-scroll">Nosotros</a></li>
 		  <li><a href="#noticias" class="page-scroll">Noticias</a></li>
-        <li><a href="#restaurant-menu" class="page-scroll">Tutoriales</a></li>
-        <li><a href="#portfolio" class="page-scroll">Videos</a></li>
+        <li><a href="#tutoriales" class="page-scroll">Tutoriales</a></li>
+        <li><a href="#videos" class="page-scroll">Videos</a></li>
+		<li><a href="#participantes" class="page-scroll">Participantes</a></li>
         <li><a href="#team" class="page-scroll">Fundadores</a></li>
-        <!--  <li><a href="#call-reservation" class="page-scroll">Contacto</a></li> -->
       </ul>
     </div>
-    <!-- /.navbar-collapse -->  
   </div>
 </nav>
 
 
 <!--..................................................... Barra de redes sociales .......................................... -->
-<!--.................................................................................................................... -->
-	
-	
+
+
 <div class="social-bar">
     
     <a href="https://github.com/unalyticsteam" class="icon icon-github " target="_blank"></a>
 	<a href="https://www.facebook.com/unalytics/" class="icon icon-facebook " target="_blank"></a>
     <a href="mailto:unalyticsteam@gmail.com" class="icon icon-mail" target="_blank"></a>
-  <a href="https://twitter.com/Unalytics1" class="icon icon-twitter" target="_blank"></a>
+    <a href="https://twitter.com/Unalytics1" class="icon icon-twitter" target="_blank"></a>
     <a href="https://www.linkedin.com/in/unalytics-team-b7a61a179//" class="icon icon-linkedin" target="_blank"></a>
 
   </div>
 
 
 <!--................................................ Header Cabecera....................................................... -->
-<!--.................................................................................................................... -->
-	
+
 <header id="header">
   <div class="intro">
     <div class="overlay">
@@ -109,7 +117,7 @@
           <div class="intro-text">
             <h1>Unalytics</h1>
             <p>Universidad Nacional y Analítica</p>
-            <a href="#about" class="btn btn-custom btn-lg page-scroll">Descubre una historia</a> </div>
+            <a href="#about" class="btn btn-custom btn-lg page-scroll">Descubre</a> </div>
         </div>
       </div>
     </div>
@@ -145,78 +153,97 @@
 	
 	
 <!-- .......................................... Noticas  () ....................................................-->
-	
+<!--	
 <div id="noticias">
-	
-  <div class="section-title text-center center">  
-	  <h2>Noticias</h2>
-      <hr>
-  </div>
-	
+	<div class="section-title text-center center">  
+	  <h2>Noticias</h2></div>
 	
 	
 	<div class="container">
-		
-	  <div class="service-text" align="center">
-		<h3 style="color:#08298A">
-			 Actualmente nos encontramos trabajando analítica de datos con software estadístico R.
-			 Las reuniones se están dando en el salón 43-111 de la Universidad Nacional Sede Medellín.
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    
+     
+      <div class="carousel-inner">
+      
+        <div class="item active">
+          <img src="http://placehold.it/760x400/cccccc/ffffff">
+           <div class="carousel-caption">
+            <h4><a href="#">Lorem ipsum dolor sit amet consetetur sadipscing</a></h4>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+          </div>
+        </div>
+ 
+         <div class="item">
+          <img src="http://placehold.it/760x400/999999/cccccc">
+           <div class="carousel-caption">
+            <h4><a href="#">consetetur sadipscing elitr, sed diam nonumy eirmod</a></h4>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+          </div>
+        </div>
+        
+        <div class="item">
+          <img src="http://placehold.it/760x400/dddddd/333333">
+           <div class="carousel-caption">
+            <h4><a href="#">tempor invidunt ut labore et dolore</a></h4>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+          </div>
+        </div>
+        
+        <div class="item">
+          <img src="http://placehold.it/760x400/999999/cccccc">
+           <div class="carousel-caption">
+            <h4><a href="#">magna aliquyam erat, sed diam voluptua</a></h4>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+          </div>
+        </div>
 
-       <br> 
-       <br>
-       Invitación al participar en el simposio internacional de estadística.
-       <a href="http://simposioestadistica.unal.edu.co/" target="_blank">http://simposioestadistica.unal.edu.co/</a> 
-		 </h3> 	
-		  
-		</div>
+        <div class="item">
+          <img src="http://placehold.it/760x400/dddddd/333333">
+           <div class="carousel-caption">
+            <h4><a href="#">tempor invidunt ut labore et dolore magna aliquyam erat</a></h4>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+          </div>
+        </div>
+                
+      </div>
 
 
-				
-      				<!-- single service -->
-			<!--	<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<div class="icon">
-							<i class="flaticon-011-compass"></i>
-						</div> -->
-						
-						
-					<!--	<div class="service-text">
-						  <h2 align="center">Noticias</h2>
-						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-					  </div>
-					</div>
-				</div>
-			
-				<div class="col-md-4 col-sm-6">
-					<div class="service">
-						<div class="icon">
-							<i class="flaticon-037-idea"></i>
-						</div>
-						<div class="service-text">
-						  <h2 align="center">SMART MARKETING</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-						</div>
-					</div>
-				</div> -->
-	  </div>
-	
-		<br>
-		<br>
-		<br>
-	
+    <ul class="list-group col-sm-4">
+      <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active"><h4>Lorem ipsum dolor sit amet consetetur sadipscing</h4></li>
+      <li data-target="#myCarousel" data-slide-to="1" class="list-group-item"><h4>consetetur sadipscing elitr, sed diam nonumy eirmod</h4></li>
+      <li data-target="#myCarousel" data-slide-to="2" class="list-group-item"><h4>tempor invidunt ut labore et dolore</h4></li>
+      <li data-target="#myCarousel" data-slide-to="3" class="list-group-item"><h4>magna aliquyam erat, sed diam voluptua</h4></li>
+      <li data-target="#myCarousel" data-slide-to="4" class="list-group-item"><h4>tempor invidunt ut labore et dolore magna aliquyam erat</h4></li>
+    </ul>
+
+     
+      <div class="carousel-controls">
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+      </div>
+
+    </div>
 </div>
-	
-	
 
+<br>
+<br>
+<br>
+<br>
+
+</div> -->
 	
 	
 	
 	
 	
-	
-<!-- .......................................... Menu Section  (temas) ....................................................-->
-<div id="restaurant-menu">
-  <div class="section-title text-center center">  
+<!-- .......................................... Tutoriales ....................................................-->
+<!--
+<div id="tutoriales1"> 
+  <div class="section-title text-center center"> 
 	  <h2>Temas</h2>
       <hr>
   </div>
@@ -229,7 +256,7 @@
             <h1>ANALÍTICA DE DATOS CON R</h1>
         </div>
 		
-		<!-- Inicios en R***** -->		
+			
         <ul class="list-group">
 			
 			
@@ -582,15 +609,69 @@
         </ul>
 	</div>
 </div>
+</div> -->
+	
+<!-- ******************************************************************************* -->
+	
+<div id="tutoriales">
+	<div class="section-title text-center center">
+		<h2>Temas</h2>
+		<hr>
+	</div>
+	
+	<div class="container">
+    <div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Panel 1</h3>
+					<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-down"></i></span>
+				</div>
+				<div class="panel-body">Panel content</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<h3 class="panel-title">Panel 2</h3>
+					<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+				</div>
+				<div class="panel-body">Panel content</div>
+		</div>
+	</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">Panel 3</h3>
+					<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+				</div>
+				<div class="panel-body">Panel content</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-warning">
+				<div class="panel-heading">
+					<h3 class="panel-title">Panel 4</h3>
+					<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+				</div>
+				<div class="panel-body">Panel content</div>
+			</div>
+		</div>
+	</div>
+</div>
+	
+	
 </div>
 	
 	
 	
 	
 
-<!-- Portfolio Section -->
+<!--------------------------------------- videos Section---------------------------------------->
 
-<div id="portfolio">
+<div id="videos">
 	
 	
   <div class="section-title text-center center">
@@ -643,7 +724,7 @@
 <!-- Team Section -->
 	
 	
-<section id='team' class='section team-section' >
+<section id="team" >
 	
   <div class="section-title text-center center">
     <h2>FUNDADORES</h2>
