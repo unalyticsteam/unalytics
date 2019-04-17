@@ -606,10 +606,10 @@ header .intro-text {
 
 /* ..................................Menu Section (temas)......................... */
 
-#restaurant-menu {
+#tutorials {
 	padding: 0 0 60px 0;
 }
-#restaurant-menu .section-title {
+#tutorials .section-title {
 	background: #444 url(../img/menu-bg.jpg) center center no-repeat fixed;
 	background-size:cover;
 	height: 100px;
@@ -619,13 +619,13 @@ header .intro-text {
 
 
 
-#restaurant-menu .section-title h2 {
+#tutorials .section-title h2 {
 	
 	color: #fff;
 	
 }
 
-#restaurant-menu h1 {
+#tutorials h1 {
 	color: #000000;
 	font-size: 1.5em;
 	font-weight: 600;
@@ -634,19 +634,19 @@ header .intro-text {
 	
 }
 
-#restaurant-menu .col-xs-10{
+#tutorials .col-xs-10{
 	font-size: 18px;
 	font-weight: 500;
 	
 }
 
-#restaurant-menu .col-xs-5{
+#tutorials .col-xs-5{
 	font-size: 15px;
 	font-weight: 500;
 }
 
 
-#restaurant-menu .col-xs-1{
+#tutorials .col-xs-1{
 	font-size: 15px;
 	font-weight: 700;
 	color: #4D4D4D;
@@ -654,7 +654,7 @@ header .intro-text {
 
 
 
-#restaurant-menu h3 {
+#tutorials h3 {
 	color: #3A3A3A;
 	font-size: 15px;
 	font-weight: 500;
@@ -663,21 +663,21 @@ header .intro-text {
 
 
 
-#restaurant-menu img {
+#tutorials img {
 	width: 300px;
 	box-shadow: 15px 0 #a7c44c;
 }
-#restaurant-menu h3 {
+#tutorials h3 {
 	padding: 10px 0;
 	text-transform: uppercase;
 }
-#restaurant-menu .menu-section hr {
+#tutorials .menu-section hr {
 	margin: 0 auto;
 }
-#restaurant-menu .menu-section {
+#tutorials .menu-section {
 	margin: 0 20px 80px;
 }
-#restaurant-menu .menu-section-title {
+#tutorials .menu-section-title {
 	font-size: 20px;
 	display: block;
 	font-weight: 200;
@@ -688,21 +688,21 @@ header .intro-text {
 
 
 
-#restaurant-menu .menu-item {
+#tutorials .menu-item {
 	margin: 35px 0;
 	font-size: 18px;
 }
-#restaurant-menu .menu-item-name {
+#tutorials .menu-item-name {
 	font-weight: 600;
 	font-size: 17px;
 	color: #555;
 	border-bottom: 2px dotted rgb(213, 213, 213);
 }
-#restaurant-menu .menu-item-description {
+#tutorials .menu-item-description {
 	font-style: italic;
 	font-size: 15px;
 }
-#restaurant-menu .menu-item-price {
+#tutorials .menu-item-price {
 	float: right;
 	font-weight: 600;
 	color: #555;
