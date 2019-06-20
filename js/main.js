@@ -147,12 +147,6 @@ $(document).ready(function() {
 	
 	
 	
-
-	
-	
-	
-	
-	
 	
 
 }

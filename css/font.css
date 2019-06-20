@@ -30,6 +30,11 @@
 .icon-facebook:before {
   content: "\ea90";
 }
+
+.icon.youtube:before {
+    content: "\ea91";
+}
+
 .icon-twitter:before {
   content: "\ea96";
 }
