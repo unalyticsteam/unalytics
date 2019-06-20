@@ -7,12 +7,12 @@ function main() {
 $(document).on('click', '.panel-heading span.clickable', function(e){
     var $this = $(this);
 	if(!$this.hasClass('panel-collapsed')) {
-		$this.parents('.panel').find('.panel-body').slideUp();
+		$this.parents('.panel').find('.panel-body').slideDown();
 		$this.addClass('panel-collapsed');
 		$this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
 		
 	} else {
-		$this.parents('.panel').find('.panel-body').slideDown();
+		$this.parents('.panel').find('.panel-body').slideUp();
 		$this.removeClass('panel-collapsed');
 		$this.find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
 		
@@ -136,14 +136,14 @@ $(window).load(function() {
 
 /****************************Funcion para la lista desplegable de los temas ***************************/ 
 	
-$(document).ready(function() {
-    $('[id^=detail-]').hide();
-    $('.toggle').click(function() {
+/* $(document).ready(function() {
+   $('[id^=detail-]').hide();
+   $('.toggle').click(function() {
         $input = $( this );
         $target = $('#'+$input.attr('data-toggle'));
         $target.slideToggle();
     });
-});	
+});	*/
 	
 	
 	
