@@ -38,11 +38,19 @@
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
 
 
-<!-- Para la lista expandible --> 	
+<!-- acordion --> 
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+	
+		
+	
+
+<!-- Para la lista expandible 	
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> --> 
 	
 	
 	
@@ -51,6 +59,8 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 	
+	
+
 </head>
 	
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"> 
@@ -600,6 +610,103 @@
 	
 	
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<!------------------------------------------------ Acordion ----------------------------------------->
+	
+	<h1>Accessible Accordion</h1>
+        
+    <!-- Accordion 1 -->
+    <section class="accordion" role="tablist" aria-live="polite" data-behavior="accordion">
+
+      <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+        <span id="tab1" tabindex="0" class="accordion__title" aria-controls="panel1" role="tab" aria-selected="false" aria-expanded="false" data-binding="expand-accordion-trigger">
+          <h5>Use the tab key to navigate...</h5>
+        </span>
+
+        <div id="panel1" class="accordion__content" role="tabpanel" aria-hidden="true" aria-labelledby="tab1" data-binding="expand-accordion-container">
+          <div class="accordion__content-inner">
+            <p>You can cycle through all the different accordion items through tabbing.</p>
+          </div>
+        </div>
+
+      </article>
+
+      <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+        <span id="tab2" tabindex="0" class="accordion__title" aria-controls="panel2" role="tab" aria-selected="false" aria-expanded="false" data-binding="expand-accordion-trigger">
+          <h5>Or, you can use your mouse.</h5>
+        </span>
+
+        <div id="panel2" class="accordion__content" role="tabpanel" aria-hidden="true" aria-labelledby="tab2" data-binding="expand-accordion-container">
+          <div class="accordion__content-inner">
+            <p>This accordion can be used by both mouse and keyboard-only users.</p>
+          </div>
+        </div>
+      </article>
+      
+      <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+        <span id="tab3" tabindex="0" class="accordion__title" aria-controls="panel3" role="tab" aria-selected="false" aria-expanded="false" data-binding="expand-accordion-trigger">
+          <h5>Click here to view more</h5>
+        </span>
+
+        <div id="panel3" class="accordion__content" role="tabpanel" aria-hidden="true" aria-labelledby="tab3" data-binding="expand-accordion-container">
+          <div class="accordion__content-inner">
+            <p>You can also use either the space bar or enter key to expand/collapse these panels.</p>
+          </div>
+        </div>
+      </article>
+      
+      <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+        <span id="tab4" tabindex="0" class="accordion__title" aria-controls="panel4" role="tab" aria-selected="false" aria-expanded="false" data-binding="expand-accordion-trigger">
+          <h5>ARIA</h5>
+        </span>
+
+        <div id="panel4" class="accordion__content" role="tabpanel" aria-hidden="true" aria-labelledby="tab4" data-binding="expand-accordion-container">
+          <div class="accordion__content-inner">
+            <p>This accordion makes use of ARIA tags which help aid accessibility.</p>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Accordion 2 -->
+    <section class="accordion" role="tablist" aria-live="polite" data-behavior="accordion">
+      <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+        <span id="tab5" tabindex="0" class="accordion__title" aria-controls="panel5" role="tab" aria-selected="false" aria-expanded="false" data-binding="expand-accordion-trigger">
+          <h5>Heading 1</h5>
+        </span>
+
+        <div id="panel5" class="accordion__content" role="tabpanel" aria-hidden="true" aria-labelledby="tab5" data-binding="expand-accordion-container">
+          <div class="accordion__content-inner">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+        </div>
+
+      </article>
+
+      <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
+        <span id="tab6" tabindex="0" class="accordion__title" aria-controls="panel6" role="tab" aria-selected="false" aria-expanded="false" data-binding="expand-accordion-trigger">
+          <h5>Heading 2</h5>
+        </span>
+
+        <div id="panel6" class="accordion__content" role="tabpanel" aria-hidden="true" aria-labelledby="tab6" data-binding="expand-accordion-container">
+          <div class="accordion__content-inner">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+        </div>
+      </article>
+
+    </section>
 	
 	
 	
