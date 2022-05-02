@@ -1309,9 +1309,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .sub-accordion__item {
 	padding: 5px 0;
 }
-/* 
-*	Стили для октивного подменю 
-*/
+
 .accordion__link_active {
     color: #ffffff;
     background-color: #ff8663;   
@@ -1330,4 +1328,38 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
     display: block;
     height: 100%;
 }
+
+
+/* -------  Team sectiion ---------- */
+
+
+
+
+.icon {
+    position: relative;
+    bottom: 11px
+}
+
+.mt-100 {
+    margin-top: 100px
+}
+
+.profile img {
+    width: 130px;
+    height: 140px;
+    border-radius: 50%
+}
+
+.card {
+    border-radius: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2)
+}
+
+.card-body {
+    position: relative;
+    bottom: 35px
+}
+
 
