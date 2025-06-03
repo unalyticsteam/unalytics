@@ -1,0 +1,52 @@
+/* Additional modern styles to update the look and feel */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #0d6efd;
+    --accent-color: #6610f2;
+    --background-gradient: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background-gradient);
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #111;
+}
+
+#fh5co-aside {
+    background: #ffffff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#fh5co-aside #fh5co-main-menu ul li a,
+#fh5co-aside #fh5co-logo a {
+    color: #333;
+}
+
+#fh5co-aside #fh5co-main-menu ul li a:hover,
+#fh5co-aside #fh5co-main-menu ul li.fh5co-active a {
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--accent-color);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+#fh5co-main .fh5co-narrow-content {
+    padding: 5em 2em;
+}
+
+#fh5co-hero .flexslider .slides .overlay {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+}
