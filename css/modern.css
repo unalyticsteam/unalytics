@@ -171,13 +171,17 @@ a:hover {
 /* Características/Features */
 .fh5co-feature {
     transition: all 0.3s ease;
-    padding: 20px;
+    padding: 25px;
     border-radius: 12px;
+    background: var(--card-bg);
+    box-shadow: var(--shadow-sm);
+    min-height: 220px;
+    display: flex;
+    align-items: flex-start;
 }
 
 .fh5co-feature:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.8);
     box-shadow: var(--shadow-md);
 }
 
@@ -196,9 +200,21 @@ a:hover {
     color: white;
 }
 
+.fh5co-feature .fh5co-text {
+    flex: 1;
+}
+
 .fh5co-feature .fh5co-text h3 {
     color: var(--primary-color);
     font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.fh5co-feature .fh5co-text p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0;
 }
 
 /* Títulos de sección */
@@ -340,66 +356,94 @@ a:hover {
     }
 }
 
-/* Tarjetas uniformes - Todas del mismo tamaño */
+/* Tarjetas uniformes - Todas del mismo tamaño usando CSS Grid */
+.row-bottom-padded-md {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 2em;
+}
+
+@media screen and (min-width: 992px) {
+    .row-bottom-padded-md {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .row-bottom-padded-md {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .row-bottom-padded-md {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Las columnas ahora usan grid, eliminar padding innecesario */
+.col-padding {
+    display: contents;
+}
+
 .blog-entry {
     background: var(--card-bg);
     height: 100%;
-    min-height: 480px;
     display: flex;
     flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
 }
 
 .blog-entry .blog-img {
-    height: 220px;
+    height: 200px;
     overflow: hidden;
     flex-shrink: 0;
+    background: var(--background-gradient-start);
 }
 
 .blog-entry .blog-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 .blog-entry .desc {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 25px;
+    min-height: 280px;
 }
 
 .blog-entry .desc h3 {
-    min-height: 60px;
     margin-bottom: 15px;
+    line-height: 1.4;
+    font-size: 16px;
+    height: 88px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
 .blog-entry .desc p {
     flex: 1;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
-/* Asegurar que todas las tarjetas tengan la misma altura */
-.col-padding {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-.col-padding .blog-entry {
-    width: 100%;
-}
-
-/* Responsivo para tarjetas */
-@media screen and (max-width: 768px) {
-    .blog-entry {
-        min-height: auto;
-    }
-
-    .blog-entry .desc h3 {
-        min-height: auto;
-    }
+.blog-entry:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
 }
 
 /* Ajuste para cards de contacto */
@@ -422,45 +466,59 @@ body,
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Tarjetas de contacto simplificadas */
+/* Tarjetas de contacto simplificadas y uniformes */
 .contact-card {
     background: var(--card-bg);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: var(--shadow-sm);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
-    border-left: 4px solid var(--primary-color);
+    border-left: 5px solid var(--primary-color);
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contact-card:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+    border-left-color: var(--accent-color);
 }
 
 .contact-card h3 {
     color: var(--primary-color);
-    margin-bottom: 8px;
-    font-size: 22px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .contact-card .contact-role {
     color: var(--text-secondary);
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 15px;
+    margin-bottom: 25px;
     font-weight: 500;
+    letter-spacing: 0.3px;
 }
 
 .contact-card .contact-info p {
     color: var(--text-secondary);
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    font-size: 15px;
+}
+
+.contact-card .contact-info p:last-child {
+    margin-bottom: 0;
 }
 
 .contact-card .contact-info i {
     color: var(--primary-color);
-    font-size: 18px;
+    font-size: 20px;
+    width: 24px;
+    text-align: center;
 }
 
 .contact-card .contact-info a {
@@ -471,4 +529,65 @@ body,
 
 .contact-card .contact-info a:hover {
     color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Grid para contactos */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 2em;
+}
+
+@media screen and (max-width: 767px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        min-height: auto;
+    }
+}
+
+/* Asegurar que las features en about también estén alineadas */
+.fh5co-narrow-content .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    .fh5co-narrow-content .row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.fh5co-narrow-content .row .col-md-6,
+.fh5co-narrow-content .row .col-md-4,
+.fh5co-narrow-content .row .col-md-3 {
+    display: contents;
+}
+
+/* Inicio - Features en index.html */
+#intro .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+@media screen and (max-width: 992px) {
+    #intro .row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #intro .row {
+        grid-template-columns: 1fr;
+    }
+}
+
+#intro .col-md-4 {
+    display: contents;
 }
