@@ -1,51 +1,259 @@
-/* Additional modern styles to update the look and feel */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* Estilos modernos para Unalytics */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 :root {
-    --primary-color: #0d6efd;
-    --accent-color: #6610f2;
-    --background-gradient: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+    --primary-color: #2563eb;
+    --primary-dark: #1e40af;
+    --accent-color: #8b5cf6;
+    --accent-light: #a78bfa;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --background-light: #f8fafc;
+    --background-white: #ffffff;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
+/* Estilos generales del cuerpo */
 body {
     font-family: 'Poppins', sans-serif;
-    background: var(--background-gradient);
-    color: #333;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    color: var(--text-primary);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    color: #111;
+    color: var(--text-primary);
 }
 
+/* Sidebar moderno */
 #fh5co-aside {
-    background: #ffffff;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+    background: var(--background-white);
+    box-shadow: var(--shadow-lg);
 }
 
-#fh5co-aside #fh5co-main-menu ul li a,
 #fh5co-aside #fh5co-logo a {
-    color: #333;
+    color: var(--primary-color);
+    font-weight: 700;
+    transition: all 0.3s ease;
 }
 
-#fh5co-aside #fh5co-main-menu ul li a:hover,
+#fh5co-aside #fh5co-logo a:hover {
+    color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+#fh5co-aside #fh5co-main-menu ul li a {
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 5px 15px;
+}
+
+#fh5co-aside #fh5co-main-menu ul li a:after {
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    height: 3px;
+    border-radius: 2px;
+}
+
+#fh5co-aside #fh5co-main-menu ul li a:hover {
+    color: var(--primary-color);
+    background: rgba(37, 99, 235, 0.05);
+    transform: translateX(5px);
+}
+
 #fh5co-aside #fh5co-main-menu ul li.fh5co-active a {
     color: var(--primary-color);
+    background: rgba(37, 99, 235, 0.1);
+    font-weight: 600;
 }
 
+/* Enlaces */
 a {
     color: var(--accent-color);
+    transition: all 0.3s ease;
 }
 
 a:hover {
     color: var(--primary-color);
 }
 
+/* Íconos sociales en el footer */
+#fh5co-aside .fh5co-footer ul li a {
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(37, 99, 235, 0.05);
+}
+
+#fh5co-aside .fh5co-footer ul li a:hover {
+    background: var(--primary-color);
+    color: white !important;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Footer - Conservando el año */
+#fh5co-aside .fh5co-footer p {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Contenido principal */
 #fh5co-main .fh5co-narrow-content {
     padding: 5em 2em;
 }
 
+/* Hero section */
 #fh5co-hero .flexslider .slides .overlay {
-    background: rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.6), rgba(139, 92, 246, 0.4));
+}
+
+#fh5co-hero .flexslider .slider-text > .slider-text-inner h1 {
+    font-weight: 700;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#fh5co-hero .flexslider .slider-text > .slider-text-inner h2 {
+    font-weight: 400;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Características/Features */
+.fh5co-feature {
+    transition: all 0.3s ease;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.fh5co-feature:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: var(--shadow-md);
+}
+
+.fh5co-feature .fh5co-icon {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.fh5co-feature:hover .fh5co-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: var(--shadow-lg);
+}
+
+.fh5co-feature .fh5co-icon i {
+    color: white;
+}
+
+.fh5co-feature .fh5co-text h3 {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Títulos de sección */
+.fh5co-heading {
+    color: var(--text-primary);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.fh5co-heading:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+/* Botones */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    border: none;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Tarjetas de trabajo/blog */
+.blog-entry {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.blog-entry:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+}
+
+.work {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+/* Navegación del accordion */
+.accordion__item {
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.accordion__item:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.accordion__item:nth-child(odd) > :first-child:not(.accordion__link_active) {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+}
+
+.accordion__link_active {
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-light)) !important;
+}
+
+/* Perfil de equipo */
+.card {
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Animaciones suaves */
+* {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Mejoras responsivas */
+@media screen and (max-width: 768px) {
+    #fh5co-main .fh5co-narrow-content {
+        padding: 3em 1.5em;
+    }
+
+    .fh5co-feature {
+        margin-bottom: 30px;
+    }
 }
