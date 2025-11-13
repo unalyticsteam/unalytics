@@ -3,40 +3,44 @@
 
 :root {
     /* Colores Universidad Nacional de Colombia */
-    --primary-color: #6AB043;
-    --primary-dark: #509636;
-    --accent-color: #3D7D2A;
-    --accent-light: #8BC973;
-    --text-primary: #1e293b;
-    --text-secondary: #64748b;
-    --background-light: #f8fafc;
+    --primary-color: #00A859;
+    --primary-dark: #008C4A;
+    --accent-color: #F5B700;
+    --accent-light: #FFD666;
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --background-gradient-start: #f7fafc;
+    --background-gradient-end: #edf2f7;
     --background-white: #ffffff;
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
     --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
     --card-bg: #ffffff;
+    --sidebar-bg: #ffffff;
 }
 
 /* Modo oscuro */
 [data-theme="dark"] {
-    --primary-color: #8BC973;
-    --primary-dark: #6AB043;
-    --accent-color: #6AB043;
-    --accent-light: #A8D89A;
+    --primary-color: #00C96D;
+    --primary-dark: #00A859;
+    --accent-color: #FFD666;
+    --accent-light: #FFEB99;
     --text-primary: #e2e8f0;
-    --text-secondary: #94a3b8;
-    --background-light: #1e293b;
-    --background-white: #0f172a;
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
-    --card-bg: #1e293b;
+    --text-secondary: #a0aec0;
+    --background-gradient-start: #1a202c;
+    --background-gradient-end: #2d3748;
+    --background-white: #2d3748;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.6);
+    --card-bg: #2d3748;
+    --sidebar-bg: #1a202c;
 }
 
 /* Estilos generales del cuerpo */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background: linear-gradient(135deg, var(--background-gradient-start) 0%, var(--background-gradient-end) 100%);
     color: var(--text-primary);
 }
 
@@ -48,8 +52,28 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Sidebar moderno */
 #fh5co-aside {
-    background: var(--background-white);
+    background: var(--sidebar-bg);
     box-shadow: var(--shadow-lg);
+}
+
+#fh5co-aside .fh5co-footer p,
+#fh5co-aside .fh5co-footer p small {
+    color: var(--text-secondary) !important;
+}
+
+/* Contenido principal responsive al tema */
+#fh5co-main {
+    background: transparent;
+}
+
+.desc h3,
+.desc h3 a {
+    color: var(--text-primary) !important;
+}
+
+.desc p,
+.desc span {
+    color: var(--text-secondary) !important;
 }
 
 #fh5co-aside #fh5co-logo a {
@@ -79,13 +103,13 @@ h1, h2, h3, h4, h5, h6 {
 
 #fh5co-aside #fh5co-main-menu ul li a:hover {
     color: var(--primary-color);
-    background: rgba(37, 99, 235, 0.05);
+    background: rgba(0, 168, 89, 0.08);
     transform: translateX(5px);
 }
 
 #fh5co-aside #fh5co-main-menu ul li.fh5co-active a {
     color: var(--primary-color);
-    background: rgba(37, 99, 235, 0.1);
+    background: rgba(0, 168, 89, 0.12);
     font-weight: 600;
 }
 
@@ -108,7 +132,7 @@ a:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(37, 99, 235, 0.05);
+    background: rgba(0, 168, 89, 0.08);
 }
 
 #fh5co-aside .fh5co-footer ul li a:hover {
@@ -131,7 +155,7 @@ a:hover {
 
 /* Hero section */
 #fh5co-hero .flexslider .slides .overlay {
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.6), rgba(139, 92, 246, 0.4));
+    background: linear-gradient(135deg, rgba(0, 168, 89, 0.7), rgba(245, 183, 0, 0.3));
 }
 
 #fh5co-hero .flexslider .slider-text > .slider-text-inner h1 {
@@ -276,43 +300,59 @@ a:hover {
     }
 }
 
-/* Botón de modo oscuro */
+/* Botón de modo oscuro - pequeño y discreto */
 .dark-mode-toggle {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     z-index: 10000;
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 12px 16px;
-    border-radius: 50px;
+    background: var(--card-bg);
+    color: var(--text-secondary);
+    border: 1px solid var(--text-secondary);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
     cursor: pointer;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
-    font-size: 20px;
+    font-size: 16px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    opacity: 0.7;
 }
 
 .dark-mode-toggle:hover {
-    background: var(--primary-dark);
-    transform: scale(1.05);
-    box-shadow: var(--shadow-lg);
+    opacity: 1;
+    transform: scale(1.1);
+    box-shadow: var(--shadow-md);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
-/* Tarjetas uniformes */
+@media screen and (max-width: 768px) {
+    .dark-mode-toggle {
+        top: 10px;
+        right: 60px;
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+}
+
+/* Tarjetas uniformes - Todas del mismo tamaño */
 .blog-entry {
     background: var(--card-bg);
     height: 100%;
+    min-height: 480px;
     display: flex;
     flex-direction: column;
 }
 
 .blog-entry .blog-img {
-    height: 200px;
+    height: 220px;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .blog-entry .blog-img img {
@@ -325,19 +365,41 @@ a:hover {
     flex: 1;
     display: flex;
     flex-direction: column;
+    padding: 20px;
+}
+
+.blog-entry .desc h3 {
+    min-height: 60px;
+    margin-bottom: 15px;
 }
 
 .blog-entry .desc p {
     flex: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
 }
 
 /* Asegurar que todas las tarjetas tengan la misma altura */
 .col-padding {
     display: flex;
+    margin-bottom: 20px;
 }
 
 .col-padding .blog-entry {
     width: 100%;
+}
+
+/* Responsivo para tarjetas */
+@media screen and (max-width: 768px) {
+    .blog-entry {
+        min-height: auto;
+    }
+
+    .blog-entry .desc h3 {
+        min-height: auto;
+    }
 }
 
 /* Ajuste para cards de contacto */
@@ -358,4 +420,55 @@ body,
 .card,
 .fh5co-feature {
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Tarjetas de contacto simplificadas */
+.contact-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary-color);
+}
+
+.contact-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+.contact-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-size: 22px;
+}
+
+.contact-card .contact-role {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.contact-card .contact-info p {
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-card .contact-info i {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.contact-card .contact-info a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-card .contact-info a:hover {
+    color: var(--primary-color);
 }
