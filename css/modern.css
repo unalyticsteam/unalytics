@@ -1,11 +1,12 @@
-/* Estilos modernos para Unalytics */
+/* Estilos modernos para Unalytics - Colores UNAL */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 :root {
-    --primary-color: #2563eb;
-    --primary-dark: #1e40af;
-    --accent-color: #8b5cf6;
-    --accent-light: #a78bfa;
+    /* Colores Universidad Nacional de Colombia */
+    --primary-color: #6AB043;
+    --primary-dark: #509636;
+    --accent-color: #3D7D2A;
+    --accent-light: #8BC973;
     --text-primary: #1e293b;
     --text-secondary: #64748b;
     --background-light: #f8fafc;
@@ -13,6 +14,23 @@
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
     --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+    --card-bg: #ffffff;
+}
+
+/* Modo oscuro */
+[data-theme="dark"] {
+    --primary-color: #8BC973;
+    --primary-dark: #6AB043;
+    --accent-color: #6AB043;
+    --accent-light: #A8D89A;
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --background-light: #1e293b;
+    --background-white: #0f172a;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --card-bg: #1e293b;
 }
 
 /* Estilos generales del cuerpo */
@@ -256,4 +274,88 @@ a:hover {
     .fh5co-feature {
         margin-bottom: 30px;
     }
+}
+
+/* Botón de modo oscuro */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dark-mode-toggle:hover {
+    background: var(--primary-dark);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Tarjetas uniformes */
+.blog-entry {
+    background: var(--card-bg);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-entry .blog-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.blog-entry .blog-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-entry .desc {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-entry .desc p {
+    flex: 1;
+}
+
+/* Asegurar que todas las tarjetas tengan la misma altura */
+.col-padding {
+    display: flex;
+}
+
+.col-padding .blog-entry {
+    width: 100%;
+}
+
+/* Ajuste para cards de contacto */
+.card {
+    background: var(--card-bg);
+    height: 100%;
+    min-height: 350px;
+}
+
+.card .card-subtitle p {
+    color: var(--text-secondary);
+}
+
+/* Transición suave para el cambio de tema */
+body,
+#fh5co-aside,
+.blog-entry,
+.card,
+.fh5co-feature {
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
