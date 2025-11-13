@@ -591,3 +591,199 @@ body,
 #intro .col-md-4 {
     display: contents;
 }
+
+/* Tutoriales - Diseño moderno con tarjetas expandibles */
+.tutorial-section {
+    margin-bottom: 50px;
+}
+
+.tutorial-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 25px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.tutorial-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+}
+
+.tutorial-header {
+    padding: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(135deg, var(--card-bg) 0%, var(--background-gradient-start) 100%);
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tutorial-header:hover {
+    border-bottom-color: var(--primary-color);
+}
+
+.tutorial-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.tutorial-card:hover .tutorial-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.tutorial-icon.r-icon {
+    background: linear-gradient(135deg, #276DC3, #5B9BD5);
+}
+
+.tutorial-icon.python-icon {
+    background: linear-gradient(135deg, #3776AB, #FFD43B);
+}
+
+.tutorial-icon.git-icon {
+    background: linear-gradient(135deg, #F05032, #F34F29);
+}
+
+.tutorial-header-content {
+    flex: 1;
+}
+
+.tutorial-header-content h3 {
+    margin: 0 0 8px 0;
+    color: var(--text-primary);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.tutorial-header-content p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 15px;
+}
+
+.tutorial-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.tutorial-card.active .tutorial-toggle {
+    transform: rotate(180deg);
+    background: var(--accent-color);
+}
+
+.tutorial-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.tutorial-card.active .tutorial-content {
+    max-height: 2000px;
+}
+
+.tutorial-body {
+    padding: 0 30px 30px 30px;
+}
+
+.tutorial-topics {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.tutorial-topic {
+    padding: 15px 20px;
+    background: var(--background-gradient-start);
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.tutorial-topic:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateX(5px);
+}
+
+.tutorial-topic:hover .topic-name {
+    color: white;
+}
+
+.tutorial-topic:hover .topic-link {
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.topic-name {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 15px;
+    flex: 1;
+}
+
+.topic-link {
+    color: var(--accent-color);
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: rgba(245, 183, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.topic-link:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+/* Responsive para tutoriales */
+@media screen and (max-width: 768px) {
+    .tutorial-header {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .tutorial-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .tutorial-header-content h3 {
+        font-size: 20px;
+    }
+
+    .tutorial-body {
+        padding: 0 20px 20px 20px;
+    }
+
+    .tutorial-topic {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
