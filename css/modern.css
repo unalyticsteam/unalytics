@@ -2,39 +2,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 :root {
-    /* Colores Universidad Nacional de Colombia */
-    --primary-color: #00A859;
-    --primary-dark: #008C4A;
-    --accent-color: #F5B700;
-    --accent-light: #FFD666;
-    --text-primary: #1a202c;
-    --text-secondary: #4a5568;
-    --background-gradient-start: #f7fafc;
-    --background-gradient-end: #edf2f7;
+    /* Colores Universidad Nacional de Colombia - Paleta refinada */
+    --primary-color: #009B52;
+    --primary-dark: #007A3F;
+    --primary-light: #00C96D;
+    --accent-color: #E8AD0F;
+    --accent-light: #F5C84B;
+    --accent-subtle: #FFF8E7;
+    --text-primary: #2d3748;
+    --text-secondary: #718096;
+    --background-gradient-start: #fafbfc;
+    --background-gradient-end: #f1f4f6;
     --background-white: #ffffff;
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
-    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
     --card-bg: #ffffff;
     --sidebar-bg: #ffffff;
+    --border-subtle: #e2e8f0;
 }
 
-/* Modo oscuro */
+/* Modo oscuro - Paleta refinada */
 [data-theme="dark"] {
-    --primary-color: #00C96D;
-    --primary-dark: #00A859;
-    --accent-color: #FFD666;
-    --accent-light: #FFEB99;
-    --text-primary: #e2e8f0;
-    --text-secondary: #a0aec0;
+    --primary-color: #00D670;
+    --primary-dark: #00B85D;
+    --primary-light: #33E091;
+    --accent-color: #F5C84B;
+    --accent-light: #FFD976;
+    --accent-subtle: #3d3520;
+    --text-primary: #f7fafc;
+    --text-secondary: #cbd5e0;
     --background-gradient-start: #1a202c;
     --background-gradient-end: #2d3748;
     --background-white: #2d3748;
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
-    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.6);
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
     --card-bg: #2d3748;
     --sidebar-bg: #1a202c;
+    --border-subtle: #4a5568;
 }
 
 /* Estilos generales del cuerpo */
@@ -170,19 +176,21 @@ a:hover {
 
 /* Características/Features */
 .fh5co-feature {
-    transition: all 0.3s ease;
-    padding: 25px;
-    border-radius: 12px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 30px;
+    border-radius: 14px;
     background: var(--card-bg);
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-subtle);
     min-height: 220px;
     display: flex;
     align-items: flex-start;
 }
 
 .fh5co-feature:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
 }
 
 .fh5co-feature .fh5co-icon {
@@ -252,15 +260,17 @@ a:hover {
 
 /* Tarjetas de trabajo/blog */
 .blog-entry {
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-subtle);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .blog-entry:hover {
     box-shadow: var(--shadow-lg);
-    transform: translateY(-5px);
+    transform: translateY(-6px);
+    border-color: var(--primary-color);
 }
 
 .work {
@@ -359,26 +369,23 @@ a:hover {
 /* Tarjetas uniformes - Todas del mismo tamaño usando CSS Grid */
 .row-bottom-padded-md {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
     margin-bottom: 2em;
+    width: 100%;
 }
 
-@media screen and (min-width: 992px) {
-    .row-bottom-padded-md {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media screen and (max-width: 991px) and (min-width: 768px) {
+@media screen and (max-width: 991px) {
     .row-bottom-padded-md {
         grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
     }
 }
 
 @media screen and (max-width: 767px) {
     .row-bottom-padded-md {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
 
@@ -392,10 +399,11 @@ a:hover {
     height: 100%;
     display: flex;
     flex-direction: column;
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-subtle);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .blog-entry .blog-img {
@@ -472,8 +480,10 @@ body,
     padding: 35px;
     border-radius: 16px;
     box-shadow: var(--shadow-md);
-    transition: all 0.3s ease;
-    border-left: 5px solid var(--primary-color);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    border-left: 4px solid var(--primary-color);
+    border: 1px solid var(--border-subtle);
+    border-left: 4px solid var(--primary-color);
     min-height: 200px;
     display: flex;
     flex-direction: column;
@@ -482,7 +492,7 @@ body,
 
 .contact-card:hover {
     box-shadow: var(--shadow-lg);
-    transform: translateY(-5px);
+    transform: translateY(-6px);
     border-left-color: var(--accent-color);
 }
 
@@ -601,14 +611,16 @@ body,
     background: var(--card-bg);
     border-radius: 16px;
     box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-subtle);
     margin-bottom: 25px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tutorial-card:hover {
     box-shadow: var(--shadow-lg);
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+    border-color: var(--primary-color);
 }
 
 .tutorial-header {
@@ -633,10 +645,11 @@ body,
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
+    font-size: 36px;
     flex-shrink: 0;
     box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
+    color: #ffffff;
 }
 
 .tutorial-card:hover .tutorial-icon {
@@ -644,15 +657,15 @@ body,
 }
 
 .tutorial-icon.r-icon {
-    background: linear-gradient(135deg, #276DC3, #5B9BD5);
+    background: linear-gradient(135deg, #2563EB, #3B82F6);
 }
 
 .tutorial-icon.python-icon {
-    background: linear-gradient(135deg, #3776AB, #FFD43B);
+    background: linear-gradient(135deg, #306998, #4B8BBE);
 }
 
 .tutorial-icon.git-icon {
-    background: linear-gradient(135deg, #F05032, #F34F29);
+    background: linear-gradient(135deg, #DE4C36, #F05032);
 }
 
 .tutorial-header-content {
@@ -769,7 +782,8 @@ body,
     .tutorial-icon {
         width: 50px;
         height: 50px;
-        font-size: 24px;
+        font-size: 28px;
+        color: #ffffff;
     }
 
     .tutorial-header-content h3 {
