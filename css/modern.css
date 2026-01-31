@@ -297,7 +297,7 @@ a:hover {
 
 @media screen and (max-width: 992px) {
     #intro .row {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -307,8 +307,13 @@ a:hover {
     }
 }
 
-#intro .col-md-4 {
-    display: contents;
+/* Reset Bootstrap columns para usar grid */
+#intro .row > .col-md-4,
+#intro .row > [class*="col-"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    float: none;
 }
 
 .fh5co-feature {
