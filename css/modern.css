@@ -297,7 +297,7 @@ a:hover {
 
 @media screen and (max-width: 992px) {
     #intro .row {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -307,8 +307,13 @@ a:hover {
     }
 }
 
-#intro .col-md-4 {
-    display: contents;
+/* Reset Bootstrap columns para usar grid */
+#intro .row > .col-md-4,
+#intro .row > [class*="col-"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    float: none;
 }
 
 .fh5co-feature {
@@ -379,15 +384,9 @@ a:hover {
 /* === TARJETAS DE BLOG/TRABAJOS === */
 .row-bottom-padded-md {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
     margin-bottom: 2rem;
-}
-
-@media screen and (max-width: 992px) {
-    .row-bottom-padded-md {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -396,8 +395,14 @@ a:hover {
     }
 }
 
-.col-padding {
-    display: contents;
+/* Reset Bootstrap columns para usar grid */
+.row-bottom-padded-md > .col-md-4,
+.row-bottom-padded-md > .col-padding,
+.row-bottom-padded-md > [class*="col-"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    float: none;
 }
 
 .blog-entry {
