@@ -210,11 +210,15 @@ a:hover {
 
 #fh5co-hero .flexslider .slides .overlay {
     background: linear-gradient(
-        135deg,
-        rgba(0, 155, 60, 0.85) 0%,
-        rgba(0, 122, 47, 0.75) 50%,
-        rgba(17, 24, 39, 0.7) 100%
+        to bottom,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.3) 100%
     );
+}
+
+#fh5co-hero .flexslider .slides li {
+    background-size: cover;
+    background-position: center center;
 }
 
 #fh5co-hero .flexslider .slider-text > .slider-text-inner h1 {
@@ -598,32 +602,31 @@ a:hover {
     box-shadow: var(--shadow-md);
 }
 
-/* === TUTORIALES === */
-.tutorial-section {
-    margin-bottom: 40px;
+/* === TUTORIALES - Diseño Elegante === */
+.tutorials-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .tutorial-card {
     background: var(--surface);
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-lg);
     border: 1px solid var(--border);
-    box-shadow: var(--shadow-sm);
-    margin-bottom: 20px;
     overflow: hidden;
     transition: all var(--transition-slow);
 }
 
 .tutorial-card:hover {
     box-shadow: var(--shadow-md);
-    border-color: var(--gray-300);
 }
 
 .tutorial-header {
-    padding: 24px 28px;
+    padding: 20px 24px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
     background: var(--surface);
     transition: all var(--transition-base);
 }
@@ -633,57 +636,74 @@ a:hover {
 }
 
 .tutorial-icon {
-    width: 56px;
-    height: 56px;
-    border-radius: var(--radius-lg);
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
     flex-shrink: 0;
-    color: var(--white);
+}
+
+.tutorial-icon svg {
+    width: 28px;
+    height: 28px;
 }
 
 .tutorial-icon.r-icon {
-    background: linear-gradient(135deg, #2563EB, #3B82F6);
+    background: #F0F4FF;
+}
+
+.tutorial-icon.r-icon svg {
+    color: #2563EB;
 }
 
 .tutorial-icon.python-icon {
-    background: linear-gradient(135deg, #306998, #4B8BBE);
+    background: #FEF9E7;
+}
+
+.tutorial-icon.python-icon svg {
+    color: #F7C52D;
 }
 
 .tutorial-icon.git-icon {
-    background: linear-gradient(135deg, #DE4C36, #F05032);
+    background: #FEF2F2;
+}
+
+.tutorial-icon.git-icon svg {
+    color: #F05032;
 }
 
 .tutorial-header-content {
     flex: 1;
+    min-width: 0;
 }
 
 .tutorial-header-content h3 {
-    margin: 0 0 4px 0;
-    font-size: 18px;
+    margin: 0 0 2px 0;
+    font-size: 16px;
     font-weight: 600;
     color: var(--text-primary);
 }
 
 .tutorial-header-content p {
     margin: 0;
-    font-size: 14px;
-    color: var(--text-secondary);
+    font-size: 13px;
+    color: var(--text-muted);
 }
 
 .tutorial-toggle {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     background: var(--gray-100);
-    color: var(--text-secondary);
+    color: var(--text-muted);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 12px;
     transition: all var(--transition-base);
+    flex-shrink: 0;
 }
 
 .tutorial-card.active .tutorial-toggle {
@@ -703,51 +723,55 @@ a:hover {
 }
 
 .tutorial-body {
-    padding: 0 28px 24px 28px;
+    padding: 0 24px 20px 24px;
     border-top: 1px solid var(--border);
 }
 
 .tutorial-topics {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    .tutorial-topics {
+        grid-template-columns: 1fr;
+    }
 }
 
 .tutorial-topic {
-    padding: 14px 18px;
+    padding: 12px 16px;
     background: var(--gray-50);
-    border-radius: var(--radius-md);
-    border-left: 3px solid var(--primary);
+    border-radius: var(--radius-sm);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
     transition: all var(--transition-base);
+    text-decoration: none;
 }
 
 .tutorial-topic:hover {
     background: var(--unal-green-subtle);
-    transform: translateX(4px);
 }
 
 .topic-name {
     color: var(--text-primary);
     font-weight: 500;
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.4;
 }
 
 .topic-link {
-    color: var(--primary);
-    font-size: 16px;
-    padding: 6px 10px;
-    border-radius: var(--radius-sm);
-    background: var(--surface);
+    color: var(--text-muted);
+    font-size: 14px;
+    flex-shrink: 0;
     transition: all var(--transition-fast);
 }
 
-.topic-link:hover {
-    background: var(--primary);
-    color: var(--white);
+.tutorial-topic:hover .topic-link {
+    color: var(--primary);
 }
 
 /* === ACORDEON ORIGINAL (Tutoriales antiguos) === */
