@@ -113,14 +113,31 @@ a:hover {
 }
 
 #fh5co-aside #fh5co-logo a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
     color: var(--primary);
     font-weight: 700;
-    font-size: 32px;
+    font-size: 28px;
     letter-spacing: -0.5px;
     transition: all var(--transition-base);
+    text-decoration: none;
 }
 
 #fh5co-aside #fh5co-logo a:hover {
+    color: var(--primary-dark);
+}
+
+#fh5co-aside #fh5co-logo .logo-icon {
+    width: 48px;
+    height: 48px;
+    color: var(--primary);
+    transition: all var(--transition-base);
+}
+
+#fh5co-aside #fh5co-logo a:hover .logo-icon {
+    transform: scale(1.05);
     color: var(--primary-dark);
 }
 
