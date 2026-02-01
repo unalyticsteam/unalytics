@@ -113,10 +113,6 @@ a:hover {
 }
 
 #fh5co-aside #fh5co-logo a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
     color: var(--primary);
     font-weight: 700;
     font-size: 28px;
@@ -126,18 +122,6 @@ a:hover {
 }
 
 #fh5co-aside #fh5co-logo a:hover {
-    color: var(--primary-dark);
-}
-
-#fh5co-aside #fh5co-logo .logo-icon {
-    width: 48px;
-    height: 48px;
-    color: var(--primary);
-    transition: all var(--transition-base);
-}
-
-#fh5co-aside #fh5co-logo a:hover .logo-icon {
-    transform: scale(1.05);
     color: var(--primary-dark);
 }
 
@@ -1066,4 +1050,138 @@ body.offcanvas #fh5co-aside {
     color: var(--text-secondary);
     margin: 0;
     line-height: 1.5;
+}
+
+/* === MENU HAMBURGUESA MOBILE === */
+.fh5co-nav-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    width: 44px;
+    height: 44px;
+    display: none;
+    cursor: pointer;
+    background: var(--primary);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.fh5co-nav-toggle i {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--white);
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s ease;
+}
+
+.fh5co-nav-toggle i::before,
+.fh5co-nav-toggle i::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background: var(--white);
+    transition: all 0.2s ease;
+}
+
+.fh5co-nav-toggle i::before {
+    top: -6px;
+}
+
+.fh5co-nav-toggle i::after {
+    top: 6px;
+}
+
+.fh5co-nav-toggle:hover {
+    background: var(--primary-dark);
+}
+
+/* Menu abierto */
+.fh5co-nav-toggle.active i {
+    background: transparent;
+}
+
+.fh5co-nav-toggle.active i::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.fh5co-nav-toggle.active i::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+    .fh5co-nav-toggle {
+        display: block;
+    }
+
+    #fh5co-aside {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    body.offcanvas #fh5co-aside {
+        transform: translateX(0);
+    }
+
+    #fh5co-main {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #fh5co-main .fh5co-narrow-content {
+        padding: 2rem 1.25rem;
+    }
+
+    .features-grid {
+        gap: 12px;
+    }
+
+    .feature-card {
+        padding: 20px 16px;
+    }
+
+    .feature-card .feature-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .feature-card .feature-icon i {
+        font-size: 20px;
+    }
+
+    .feature-card h3 {
+        font-size: 14px;
+    }
+
+    .feature-card p {
+        font-size: 12px;
+    }
+
+    .projects-grid {
+        gap: 12px;
+    }
+
+    .project-card .project-img {
+        height: 150px;
+    }
+
+    .project-card .project-content {
+        padding: 16px;
+    }
+
+    .project-card .project-content h3 {
+        font-size: 13px;
+    }
+
+    .project-card .project-content p {
+        font-size: 12px;
+    }
 }
